@@ -1,0 +1,155 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { CarpetMaterials } from "./CarpetMaterials";
+import { CarpetShapes } from "./CarpetShapes";
+import { Users } from "./Users";
+import { ImageLayers } from "./ImageLayers";
+import { InvoiceProductHistories } from "./InvoiceProductHistories";
+import { InvoiceProducts } from "./InvoiceProducts";
+import { PatternLayers } from "./PatternLayers";
+import { TextLayers } from "./TextLayers";
+import { UserCarts } from "./UserCarts";
+
+@Index("carpet_material_id", ["carpetMaterialId"], {})
+@Index("designs_carpet_shape_id_index", ["carpetShapeId"], {})
+@Index("designs_user_id_index", ["userId"], {})
+@Entity("designs", { schema: "mydatabase" })
+export class Designs {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", { name: "user_id", nullable: true, unsigned: true })
+  userId: number | null;
+
+  @Column("int", {
+    name: "carpet_shape_id",
+    nullable: true,
+    unsigned: true,
+    default: () => "'1'",
+  })
+  carpetShapeId: number | null;
+
+  @Column("int", { name: "carpet_material_id", nullable: true, unsigned: true })
+  carpetMaterialId: number | null;
+
+  @Column("varchar", { name: "name", nullable: true, length: 191 })
+  name: string | null;
+
+  @Column("varchar", {
+    name: "background_color",
+    nullable: true,
+    length: 191,
+    default: () => "'#FFFFFF'",
+  })
+  backgroundColor: string | null;
+
+  @Column("varchar", {
+    name: "border_color",
+    nullable: true,
+    length: 191,
+    default: () => "'#FFFFFF'",
+  })
+  borderColor: string | null;
+
+  @Column("varchar", {
+    name: "fringe_color",
+    nullable: true,
+    length: 191,
+    default: () => "'#FFFFFF'",
+  })
+  fringeColor: string | null;
+
+  @Column("double", {
+    name: "width",
+    nullable: true,
+    precision: 8,
+    scale: 2,
+    default: () => "'0.00'",
+  })
+  width: number | null;
+
+  @Column("double", {
+    name: "length",
+    nullable: true,
+    precision: 8,
+    scale: 2,
+    default: () => "'0.00'",
+  })
+  length: number | null;
+
+  @Column("varchar", {
+    name: "path",
+    nullable: true,
+    comment: "Preview image path",
+    length: 191,
+    default: () => "'/'",
+  })
+  path: string | null;
+
+  @Column("varchar", {
+    name: "filename",
+    nullable: true,
+    comment: "preview image file name",
+    length: 191,
+  })
+  filename: string | null;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @Column("timestamp", { name: "deleted_at", nullable: true })
+  deletedAt: Date | null;
+
+  @ManyToOne(
+    () => CarpetMaterials,
+    (carpetMaterials) => carpetMaterials.designs,
+    { onDelete: "NO ACTION", onUpdate: "NO ACTION" }
+  )
+  @JoinColumn([{ name: "carpet_material_id", referencedColumnName: "id" }])
+  carpetMaterial: CarpetMaterials;
+
+  @ManyToOne(() => CarpetShapes, (carpetShapes) => carpetShapes.designs, {
+    onDelete: "NO ACTION",
+    onUpdate: "NO ACTION",
+  })
+  @JoinColumn([{ name: "carpet_shape_id", referencedColumnName: "id" }])
+  carpetShape: CarpetShapes;
+
+  @ManyToOne(() => Users, (users) => users.designs, {
+    onDelete: "NO ACTION",
+    onUpdate: "NO ACTION",
+  })
+  @JoinColumn([{ name: "user_id", referencedColumnName: "id" }])
+  user: Users;
+
+  @OneToMany(() => ImageLayers, (imageLayers) => imageLayers.design)
+  imageLayers: ImageLayers[];
+
+  @OneToMany(
+    () => InvoiceProductHistories,
+    (invoiceProductHistories) => invoiceProductHistories.design
+  )
+  invoiceProductHistories: InvoiceProductHistories[];
+
+  @OneToMany(() => InvoiceProducts, (invoiceProducts) => invoiceProducts.design)
+  invoiceProducts: InvoiceProducts[];
+
+  @OneToMany(() => PatternLayers, (patternLayers) => patternLayers.design)
+  patternLayers: PatternLayers[];
+
+  @OneToMany(() => TextLayers, (textLayers) => textLayers.design)
+  textLayers: TextLayers[];
+
+  @OneToMany(() => UserCarts, (userCarts) => userCarts.design)
+  userCarts: UserCarts[];
+}

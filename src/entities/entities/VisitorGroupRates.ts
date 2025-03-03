@@ -1,0 +1,56 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { VisitorGroups } from "./VisitorGroups";
+
+@Index("visitor_group_rates_visitor_group_id_index", ["visitorGroupId"], {})
+@Entity("visitor_group_rates", { schema: "mydatabase" })
+export class VisitorGroupRates {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", { name: "visitor_group_id", unsigned: true })
+  visitorGroupId: number;
+
+  @Column("double", {
+    name: "min_revenue",
+    precision: 22,
+    default: () => "'0'",
+  })
+  minRevenue: number;
+
+  @Column("double", {
+    name: "max_revenue",
+    precision: 22,
+    default: () => "'1000000000000'",
+  })
+  maxRevenue: number;
+
+  @Column("double", { name: "rate", precision: 22, default: () => "'5'" })
+  rate: number;
+
+  @Column("timestamp", {
+    name: "created_at",
+    default: () => "CURRENT_TIMESTAMP",
+  })
+  createdAt: Date;
+
+  @Column("timestamp", {
+    name: "updated_at",
+    default: () => "'0000-00-00 00:00:00'",
+  })
+  updatedAt: Date;
+
+  @ManyToOne(
+    () => VisitorGroups,
+    (visitorGroups) => visitorGroups.visitorGroupRates,
+    { onDelete: "CASCADE", onUpdate: "CASCADE" }
+  )
+  @JoinColumn([{ name: "visitor_group_id", referencedColumnName: "id" }])
+  visitorGroup: VisitorGroups;
+}

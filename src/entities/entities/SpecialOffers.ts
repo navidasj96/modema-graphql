@@ -1,0 +1,84 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { Products } from "./Products";
+
+@Index(
+  "special_offers_special_offer_product_id_index",
+  ["specialOfferProductId"],
+  {}
+)
+@Index(
+  "special_offers_wonderful_offer_product_id_index",
+  ["wonderfulOfferProductId"],
+  {}
+)
+@Entity("special_offers", { schema: "mydatabase" })
+export class SpecialOffers {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", {
+    name: "special_offer_product_id",
+    nullable: true,
+    unsigned: true,
+  })
+  specialOfferProductId: number | null;
+
+  @Column("int", {
+    name: "wonderful_offer_product_id",
+    nullable: true,
+    unsigned: true,
+  })
+  wonderfulOfferProductId: number | null;
+
+  @Column("varchar", {
+    name: "special_offer_title",
+    nullable: true,
+    length: 191,
+  })
+  specialOfferTitle: string | null;
+
+  @Column("varchar", {
+    name: "special_offer_subtitle",
+    nullable: true,
+    length: 191,
+  })
+  specialOfferSubtitle: string | null;
+
+  @Column("varchar", {
+    name: "special_offer_image_url",
+    nullable: true,
+    length: 191,
+  })
+  specialOfferImageUrl: string | null;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @ManyToOne(() => Products, (products) => products.specialOffers, {
+    onDelete: "NO ACTION",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([
+    { name: "special_offer_product_id", referencedColumnName: "id" },
+  ])
+  specialOfferProduct: Products;
+
+  @ManyToOne(() => Products, (products) => products.specialOffers2, {
+    onDelete: "NO ACTION",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([
+    { name: "wonderful_offer_product_id", referencedColumnName: "id" },
+  ])
+  wonderfulOfferProduct: Products;
+}

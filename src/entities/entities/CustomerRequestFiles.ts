@@ -1,0 +1,49 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { CustomerRequests } from "./CustomerRequests";
+
+@Index(
+  "customer_request_files_customer_request_id_index",
+  ["customerRequestId"],
+  {}
+)
+@Entity("customer_request_files", { schema: "mydatabase" })
+export class CustomerRequestFiles {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", { name: "customer_request_id", unsigned: true })
+  customerRequestId: number;
+
+  @Column("varchar", { name: "path", length: 191, default: () => "'/'" })
+  path: string;
+
+  @Column("varchar", { name: "filename", length: 191 })
+  filename: string;
+
+  @Column("varchar", { name: "mime", length: 191 })
+  mime: string;
+
+  @Column("varchar", { name: "original_filename", length: 191 })
+  originalFilename: string;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @ManyToOne(
+    () => CustomerRequests,
+    (customerRequests) => customerRequests.customerRequestFiles,
+    { onDelete: "CASCADE", onUpdate: "CASCADE" }
+  )
+  @JoinColumn([{ name: "customer_request_id", referencedColumnName: "id" }])
+  customerRequest: CustomerRequests;
+}

@@ -1,0 +1,71 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { Attributes } from "./Attributes";
+import { AttributeItems } from "./AttributeItems";
+import { Products } from "./Products";
+
+@Index("attribute_product_attribute_id_index", ["attributeId"], {})
+@Index("attribute_product_attribute_item_id_index", ["attributeItemId"], {})
+@Index(
+  "attribute_product_product_id_attribute_id_unique",
+  ["productId", "attributeId"],
+  { unique: true }
+)
+@Index("attribute_product_product_id_index", ["productId"], {})
+@Entity("attribute_product", { schema: "mydatabase" })
+export class AttributeProduct {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", { name: "product_id", unsigned: true })
+  productId: number;
+
+  @Column("int", { name: "attribute_id", unsigned: true })
+  attributeId: number;
+
+  @Column("int", { name: "attribute_item_id", nullable: true, unsigned: true })
+  attributeItemId: number | null;
+
+  @Column("text", { name: "value", nullable: true })
+  value: string | null;
+
+  @Column("tinyint", { name: "is_checked", nullable: true, width: 1 })
+  isChecked: boolean | null;
+
+  @Column("int", { name: "sort_order", nullable: true, unsigned: true })
+  sortOrder: number | null;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @ManyToOne(() => Attributes, (attributes) => attributes.attributeProducts, {
+    onDelete: "NO ACTION",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "attribute_id", referencedColumnName: "id" }])
+  attribute: Attributes;
+
+  @ManyToOne(
+    () => AttributeItems,
+    (attributeItems) => attributeItems.attributeProducts,
+    { onDelete: "NO ACTION", onUpdate: "CASCADE" }
+  )
+  @JoinColumn([{ name: "attribute_item_id", referencedColumnName: "id" }])
+  attributeItem: AttributeItems;
+
+  @ManyToOne(() => Products, (products) => products.attributeProducts, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "product_id", referencedColumnName: "id" }])
+  product: Products;
+}

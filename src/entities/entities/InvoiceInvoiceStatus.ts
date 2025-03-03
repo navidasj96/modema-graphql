@@ -1,0 +1,70 @@
+import {
+  Column,
+  Entity,
+  Index,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { Invoices } from "./Invoices";
+import { InvoiceStatuses } from "./InvoiceStatuses";
+import { Users } from "./Users";
+
+@Index("invoice_invoice_status_idx1", ["invoiceId", "invoiceStatusId"], {})
+@Index("invoice_invoice_status_invoice_id_index", ["invoiceId"], {})
+@Index(
+  "invoice_invoice_status_invoice_status_id_index",
+  ["invoiceStatusId"],
+  {}
+)
+@Index("invoice_invoice_status_user_id_index", ["userId"], {})
+@Entity("invoice_invoice_status", { schema: "mydatabase" })
+export class InvoiceInvoiceStatus {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("int", { name: "invoice_id", unsigned: true })
+  invoiceId: number;
+
+  @Column("int", { name: "invoice_status_id", unsigned: true })
+  invoiceStatusId: number;
+
+  @Column("int", {
+    name: "user_id",
+    nullable: true,
+    comment: "Operator who change the status.",
+    unsigned: true,
+  })
+  userId: number | null;
+
+  @Column("varchar", { name: "comment", nullable: true, length: 191 })
+  comment: string | null;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @ManyToOne(() => Invoices, (invoices) => invoices.invoiceInvoiceStatuses, {
+    onDelete: "CASCADE",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "invoice_id", referencedColumnName: "id" }])
+  invoice: Invoices;
+
+  @ManyToOne(
+    () => InvoiceStatuses,
+    (invoiceStatuses) => invoiceStatuses.invoiceInvoiceStatuses,
+    { onDelete: "NO ACTION", onUpdate: "CASCADE" }
+  )
+  @JoinColumn([{ name: "invoice_status_id", referencedColumnName: "id" }])
+  invoiceStatus: InvoiceStatuses;
+
+  @ManyToOne(() => Users, (users) => users.invoiceInvoiceStatuses, {
+    onDelete: "NO ACTION",
+    onUpdate: "CASCADE",
+  })
+  @JoinColumn([{ name: "user_id", referencedColumnName: "id" }])
+  user: Users;
+}

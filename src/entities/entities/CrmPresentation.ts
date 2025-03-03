@@ -1,0 +1,10 @@
+import { Column, Entity } from "typeorm";
+
+@Entity("crm_presentation", { schema: "mydatabase" })
+export class CrmPresentation {
+  @Column("varchar", { name: "mobile", nullable: true, length: 15 })
+  mobile: string | null;
+
+  @Column("int", { name: "option_id", nullable: true })
+  optionId: number | null;
+}

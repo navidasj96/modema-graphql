@@ -1,0 +1,32 @@
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { FileNegotiation } from "./FileNegotiation";
+
+@Entity("files", { schema: "mydatabase" })
+export class Files {
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  id: number;
+
+  @Column("varchar", { name: "filename", length: 191 })
+  filename: string;
+
+  @Column("varchar", { name: "mime", length: 191 })
+  mime: string;
+
+  @Column("varchar", { name: "original_filename", length: 191 })
+  originalFilename: string;
+
+  @Column("varchar", { name: "upload_source", length: 191 })
+  uploadSource: string;
+
+  @Column("varchar", { name: "path", length: 191, default: () => "'/'" })
+  path: string;
+
+  @Column("timestamp", { name: "created_at", nullable: true })
+  createdAt: Date | null;
+
+  @Column("timestamp", { name: "updated_at", nullable: true })
+  updatedAt: Date | null;
+
+  @OneToMany(() => FileNegotiation, (fileNegotiation) => fileNegotiation.file)
+  fileNegotiations: FileNegotiation[];
+}
