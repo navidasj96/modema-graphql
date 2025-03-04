@@ -13,7 +13,7 @@ import { States } from "./States";
 @Index("sender_informations_city_id_foreign", ["cityId"], {})
 @Index("sender_informations_country_id_foreign", ["countryId"], {})
 @Index("sender_informations_state_id_foreign", ["stateId"], {})
-@Entity("sender_informations", { schema: "mydatabase" })
+@Entity("sender_informations", { schema: "modema" })
 export class SenderInformations {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

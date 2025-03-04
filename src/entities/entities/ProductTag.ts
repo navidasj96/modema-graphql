@@ -18,7 +18,7 @@ import { Tags } from "./Tags";
 )
 @Index("product_tag_subproduct_id_index", ["subproductId"], {})
 @Index("product_tag_tag_id_index", ["tagId"], {})
-@Entity("product_tag", { schema: "mydatabase" })
+@Entity("product_tag", { schema: "modema" })
 export class ProductTag {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

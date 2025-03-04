@@ -3,7 +3,7 @@ import { InvoiceInvoiceStatus } from "./InvoiceInvoiceStatus";
 import { InvoiceReversals } from "./InvoiceReversals";
 import { Invoices } from "./Invoices";
 
-@Entity("invoice_statuses", { schema: "mydatabase" })
+@Entity("invoice_statuses", { schema: "modema" })
 export class InvoiceStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

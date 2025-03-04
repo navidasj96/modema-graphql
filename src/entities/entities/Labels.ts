@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { LabelProduct } from "./LabelProduct";
 
-@Entity("labels", { schema: "mydatabase" })
+@Entity("labels", { schema: "modema" })
 export class Labels {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

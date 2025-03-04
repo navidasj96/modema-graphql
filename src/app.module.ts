@@ -5,6 +5,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
+import { ActivitiesModule } from './activities/activities.module';
+import { AttributeAttributeGroupModule } from './attribute-attribute-group/attribute-attribute-group.module';
+import { AttributeGroupsModule } from './attribute-groups/attribute-groups.module';
+import { AttributeItemsModule } from './attribute-items/attribute-items.module';
+import { AttributeProductModule } from './attribute-product/attribute-product.module';
+import { AttributesModule } from './attributes/attributes.module';
+import { AddressModule } from './address/address.module';
+import { AttributeGroupModule } from './attribute-group/attribute-group.module';
+import { AttributeItemModule } from './attribute-item/attribute-item.module';
 
 @Module({
   imports: [
@@ -13,8 +22,8 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: '12345',
-      database: 'mydatabase',
+      password: 'Navidasj228!',
+      database: 'modema',
       autoLoadEntities: true,
       synchronize: true,
     }),
@@ -27,6 +36,15 @@ import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin
       introspection: true,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
+    ActivitiesModule,
+    AttributeAttributeGroupModule,
+    AttributeGroupsModule,
+    AttributeItemsModule,
+    AttributeProductModule,
+    AttributesModule,
+    AddressModule,
+    AttributeGroupModule,
+    AttributeItemModule,
   ],
 
   controllers: [AppController],

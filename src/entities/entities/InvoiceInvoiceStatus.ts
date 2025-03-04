@@ -18,7 +18,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("invoice_invoice_status_user_id_index", ["userId"], {})
-@Entity("invoice_invoice_status", { schema: "mydatabase" })
+@Entity("invoice_invoice_status", { schema: "modema" })
 export class InvoiceInvoiceStatus {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

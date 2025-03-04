@@ -8,7 +8,7 @@ import {
 import { CarpetFeatureUser } from "./CarpetFeatureUser";
 
 @Index("carpet_features_sort_order_index", ["sortOrder"], {})
-@Entity("carpet_features", { schema: "mydatabase" })
+@Entity("carpet_features", { schema: "modema" })
 export class CarpetFeatures {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

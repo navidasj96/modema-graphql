@@ -18,7 +18,7 @@ import { Subproducts } from "./Subproducts";
   unique: true,
 })
 @Index("color_category_subproduct_subproduct_id_index", ["subproductId"], {})
-@Entity("color_category_subproduct", { schema: "mydatabase" })
+@Entity("color_category_subproduct", { schema: "modema" })
 export class ColorCategorySubproduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

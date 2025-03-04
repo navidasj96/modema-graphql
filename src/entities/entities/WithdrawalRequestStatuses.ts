@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { WithdrawalRequests } from "./WithdrawalRequests";
 
-@Entity("withdrawal_request_statuses", { schema: "mydatabase" })
+@Entity("withdrawal_request_statuses", { schema: "modema" })
 export class WithdrawalRequestStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

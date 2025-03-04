@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("fetch_site_urls", { schema: "mydatabase" })
+@Entity("fetch_site_urls", { schema: "modema" })
 export class FetchSiteUrls {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

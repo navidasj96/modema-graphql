@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("failed_jobs", { schema: "mydatabase" })
+@Entity("failed_jobs", { schema: "modema" })
 export class FailedJobs {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

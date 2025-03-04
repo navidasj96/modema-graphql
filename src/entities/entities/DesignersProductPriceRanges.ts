@@ -13,7 +13,7 @@ import { BasicCarpetSizes } from "./BasicCarpetSizes";
   ["basicCarpetSizeId"],
   {}
 )
-@Entity("designers_product_price_ranges", { schema: "mydatabase" })
+@Entity("designers_product_price_ranges", { schema: "modema" })
 export class DesignersProductPriceRanges {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

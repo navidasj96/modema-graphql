@@ -17,7 +17,7 @@ import { Visitors } from "./Visitors";
   {}
 )
 @Index("payment_requests_visitor_id_index", ["visitorId"], {})
-@Entity("payment_requests", { schema: "mydatabase" })
+@Entity("payment_requests", { schema: "modema" })
 export class PaymentRequests {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

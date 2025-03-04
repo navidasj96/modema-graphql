@@ -13,7 +13,7 @@ import { BasicCarpetSizes } from "./BasicCarpetSizes";
   ["basicCarpetSizeId"],
   {}
 )
-@Entity("basic_carpet_size_details", { schema: "mydatabase" })
+@Entity("basic_carpet_size_details", { schema: "modema" })
 export class BasicCarpetSizeDetails {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

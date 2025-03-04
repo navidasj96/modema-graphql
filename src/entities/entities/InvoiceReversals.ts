@@ -15,7 +15,7 @@ import { Users } from "./Users";
 @Index("invoice_reversals_invoice_id_index", ["invoiceId"], {})
 @Index("invoice_reversals_invoice_status_id_index", ["invoiceStatusId"], {})
 @Index("invoice_reversals_reviewed_by_index", ["reviewedBy"], {})
-@Entity("invoice_reversals", { schema: "mydatabase" })
+@Entity("invoice_reversals", { schema: "modema" })
 export class InvoiceReversals {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

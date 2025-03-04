@@ -11,7 +11,7 @@ import { Videos } from "./Videos";
 
 @Index("customer_video_product_product_id_index", ["productId"], {})
 @Index("customer_video_product_video_id_index", ["videoId"], {})
-@Entity("customer_video_product", { schema: "mydatabase" })
+@Entity("customer_video_product", { schema: "modema" })
 export class CustomerVideoProduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

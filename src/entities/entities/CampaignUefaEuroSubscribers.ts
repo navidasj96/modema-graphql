@@ -20,7 +20,7 @@ import { Users } from "./Users";
   unique: true,
 })
 @Index("campaign_uefa_euro_subscribers_user_id_index", ["userId"], {})
-@Entity("campaign_uefa_euro_subscribers", { schema: "mydatabase" })
+@Entity("campaign_uefa_euro_subscribers", { schema: "modema" })
 export class CampaignUefaEuroSubscribers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

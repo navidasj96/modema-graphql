@@ -13,7 +13,7 @@ import { Products } from "./Products";
 })
 @Index("related_products_product_id_index", ["productId"], {})
 @Index("related_products_related_product_id_index", ["relatedProductId"], {})
-@Entity("related_products", { schema: "mydatabase" })
+@Entity("related_products", { schema: "modema" })
 export class RelatedProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

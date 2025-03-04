@@ -2,7 +2,7 @@ import { Column, Entity, Index, JoinColumn, ManyToOne } from "typeorm";
 import { Colors } from "./Colors";
 
 @Index("color_id", ["colorId"], {})
-@Entity("subcolors", { schema: "mydatabase" })
+@Entity("subcolors", { schema: "modema" })
 export class Subcolors {
   @Column("int", { name: "id", nullable: true })
   id: number | null;

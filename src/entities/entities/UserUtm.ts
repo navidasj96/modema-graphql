@@ -12,7 +12,7 @@ import { Utms } from "./Utms";
 @Index("user_utm_user_id_index", ["userId"], {})
 @Index("user_utm_user_id_utm_id_unique", ["userId", "utmId"], { unique: true })
 @Index("user_utm_utm_id_index", ["utmId"], {})
-@Entity("user_utm", { schema: "mydatabase" })
+@Entity("user_utm", { schema: "modema" })
 export class UserUtm {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

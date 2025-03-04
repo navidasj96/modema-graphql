@@ -21,7 +21,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("return_item_status_return_request_item_idx_user_id", ["userId"], {})
-@Entity("return_item_status_return_request_item", { schema: "mydatabase" })
+@Entity("return_item_status_return_request_item", { schema: "modema" })
 export class ReturnItemStatusReturnRequestItem {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

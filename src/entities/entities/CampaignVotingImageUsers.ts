@@ -14,7 +14,7 @@ import { Users } from "./Users";
   ["walletCharged"],
   {}
 )
-@Entity("campaign_voting_image_users", { schema: "mydatabase" })
+@Entity("campaign_voting_image_users", { schema: "modema" })
 export class CampaignVotingImageUsers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -18,7 +18,7 @@ import { VisitorGroups } from "./VisitorGroups";
 @Index("visitors_title_unique", ["title"], { unique: true })
 @Index("visitors_user_id_index", ["userId"], {})
 @Index("visitors_visitor_group_id_index", ["visitorGroupId"], {})
-@Entity("visitors", { schema: "mydatabase" })
+@Entity("visitors", { schema: "modema" })
 export class Visitors {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

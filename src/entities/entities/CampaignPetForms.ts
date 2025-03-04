@@ -11,7 +11,7 @@ import { Users } from "./Users";
 
 @Index("campaign_pet_forms_coupon_id_index", ["couponId"], {})
 @Index("campaign_pet_forms_user_id_index", ["userId"], {})
-@Entity("campaign_pet_forms", { schema: "mydatabase" })
+@Entity("campaign_pet_forms", { schema: "modema" })
 export class CampaignPetForms {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

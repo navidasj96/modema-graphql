@@ -16,7 +16,7 @@ import { WithdrawalRequestStatuses } from "./WithdrawalRequestStatuses";
   ["withdrawalRequestStatusId"],
   {}
 )
-@Entity("withdrawal_requests", { schema: "mydatabase" })
+@Entity("withdrawal_requests", { schema: "modema" })
 export class WithdrawalRequests {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

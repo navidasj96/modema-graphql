@@ -9,7 +9,7 @@ import { Users } from "./Users";
 
 @Index("invitation_codes_code_unique", ["code"], { unique: true })
 @Index("invitation_codes_email_unique", ["email"], { unique: true })
-@Entity("invitation_codes", { schema: "mydatabase" })
+@Entity("invitation_codes", { schema: "modema" })
 export class InvitationCodes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

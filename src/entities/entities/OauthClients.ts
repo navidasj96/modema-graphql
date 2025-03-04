@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Index("oauth_clients_user_id_index", ["userId"], {})
-@Entity("oauth_clients", { schema: "mydatabase" })
+@Entity("oauth_clients", { schema: "modema" })
 export class OauthClients {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

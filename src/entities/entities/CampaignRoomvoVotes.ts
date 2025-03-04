@@ -15,7 +15,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("campaign_roomvo_votes_user_id_index", ["userId"], {})
-@Entity("campaign_roomvo_votes", { schema: "mydatabase" })
+@Entity("campaign_roomvo_votes", { schema: "modema" })
 export class CampaignRoomvoVotes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

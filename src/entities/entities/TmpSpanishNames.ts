@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("tmp_spanish_names", { schema: "mydatabase" })
+@Entity("tmp_spanish_names", { schema: "modema" })
 export class TmpSpanishNames {
   @Column("varchar", { name: "name", nullable: true, length: 192 })
   name: string | null;

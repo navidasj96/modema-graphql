@@ -11,7 +11,7 @@ import { Images } from "./Images";
 import { Patterns } from "./Patterns";
 
 @Index("pattern_categories_image_id_index", ["imageId"], {})
-@Entity("pattern_categories", { schema: "mydatabase" })
+@Entity("pattern_categories", { schema: "modema" })
 export class PatternCategories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

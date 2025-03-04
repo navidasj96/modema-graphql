@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("export_products", { schema: "mydatabase" })
+@Entity("export_products", { schema: "modema" })
 export class ExportProducts {
   @Column("bigint", { name: "1", default: () => "'0'" })
   1: string;

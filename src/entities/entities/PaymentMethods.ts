@@ -8,7 +8,7 @@ import {
 import { PaymentMethodFields } from "./PaymentMethodFields";
 
 @Index("payment_methods_name_unique", ["name"], { unique: true })
-@Entity("payment_methods", { schema: "mydatabase" })
+@Entity("payment_methods", { schema: "modema" })
 export class PaymentMethods {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

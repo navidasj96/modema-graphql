@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("migrations", { schema: "mydatabase" })
+@Entity("migrations", { schema: "modema" })
 export class Migrations {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -21,7 +21,7 @@ import { InvoiceProductHistories } from "./InvoiceProductHistories";
   ["moneyTransferConfirmedBy"],
   {}
 )
-@Entity("invoice_histories", { schema: "mydatabase" })
+@Entity("invoice_histories", { schema: "modema" })
 export class InvoiceHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

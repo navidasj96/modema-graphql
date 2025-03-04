@@ -16,7 +16,7 @@ import { Users } from "./Users";
   unique: true,
 })
 @Index("print_profiles_version_no_unique", ["versionNo"], { unique: true })
-@Entity("print_profiles", { schema: "mydatabase" })
+@Entity("print_profiles", { schema: "modema" })
 export class PrintProfiles {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -12,7 +12,7 @@ import { CampaignRoomvoVotes } from "./CampaignRoomvoVotes";
 
 @Index("campaign_roomvo_images_user_id_index", ["userId"], {})
 @Index("campaign_roomvo_images_votes_count_index", ["votesCount"], {})
-@Entity("campaign_roomvo_images", { schema: "mydatabase" })
+@Entity("campaign_roomvo_images", { schema: "modema" })
 export class CampaignRoomvoImages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

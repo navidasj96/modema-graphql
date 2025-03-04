@@ -9,7 +9,7 @@ import {
 import { Products } from "./Products";
 
 @Index("recommended_products_product_id_index", ["productId"], {})
-@Entity("recommended_products", { schema: "mydatabase" })
+@Entity("recommended_products", { schema: "modema" })
 export class RecommendedProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

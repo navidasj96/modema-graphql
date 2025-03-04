@@ -24,7 +24,7 @@ import { Subproducts } from "./Subproducts";
   ["subproductId"],
   {}
 )
-@Entity("needs_photography_subproducts", { schema: "mydatabase" })
+@Entity("needs_photography_subproducts", { schema: "modema" })
 export class NeedsPhotographySubproducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

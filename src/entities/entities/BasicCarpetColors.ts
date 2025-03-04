@@ -23,7 +23,7 @@ import { TorobProducts } from "./TorobProducts";
 })
 @Index("basic_carpet_colors_title_unique", ["title"], { unique: true })
 @Index("sort_order", ["sortOrder"], {})
-@Entity("basic_carpet_colors", { schema: "mydatabase" })
+@Entity("basic_carpet_colors", { schema: "modema" })
 export class BasicCarpetColors {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

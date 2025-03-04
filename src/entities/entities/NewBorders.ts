@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("new_borders", { schema: "mydatabase" })
+@Entity("new_borders", { schema: "modema" })
 export class NewBorders {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

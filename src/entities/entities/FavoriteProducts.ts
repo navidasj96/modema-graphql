@@ -14,7 +14,7 @@ import { Users } from "./Users";
 @Index("product_favorites_product_id_index", ["productId"], {})
 @Index("product_favorites_subproduct_id_index", ["subproductId"], {})
 @Index("product_favorites_user_id_index", ["userId"], {})
-@Entity("favorite_products", { schema: "mydatabase" })
+@Entity("favorite_products", { schema: "modema" })
 export class FavoriteProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -29,7 +29,7 @@ import { ProductProductCategory } from "./ProductProductCategory";
   unique: true,
 })
 @Index("sort_order", ["sortOrder"], {})
-@Entity("product_categories", { schema: "mydatabase" })
+@Entity("product_categories", { schema: "modema" })
 export class ProductCategories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

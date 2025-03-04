@@ -13,7 +13,7 @@ import { Users } from "./Users";
 @Index("google_form_utms_url_index", ["url"], {})
 @Index("google_form_utms_user_id_index", ["userId"], {})
 @Index("google_form_utms_utm_index", ["utm"], {})
-@Entity("google_form_utms", { schema: "mydatabase" })
+@Entity("google_form_utms", { schema: "modema" })
 export class GoogleFormUtms {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

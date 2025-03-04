@@ -9,7 +9,7 @@ import {
 import { Designs } from "./Designs";
 
 @Index("text_layers_design_id_index", ["designId"], {})
-@Entity("text_layers", { schema: "mydatabase" })
+@Entity("text_layers", { schema: "modema" })
 export class TextLayers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Activity {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+input CreateActivityInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+type Mutation {
+  createActivity(createActivityInput: CreateActivityInput!): Activity!
+  removeActivity(id: Int!): Activity!
+  updateActivity(updateActivityInput: UpdateActivityInput!): Activity!
+}
+
+type Query {
+  activities: [Activity!]!
+  activity(id: Int!): Activity!
+}
+
+input UpdateActivityInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}

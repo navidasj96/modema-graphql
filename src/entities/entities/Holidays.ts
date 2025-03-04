@@ -10,7 +10,7 @@ import { Users } from "./Users";
 
 @Index("holidays_holiday_date_unique", ["holidayDate"], { unique: true })
 @Index("holidays_user_id_index", ["userId"], {})
-@Entity("holidays", { schema: "mydatabase" })
+@Entity("holidays", { schema: "modema" })
 export class Holidays {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

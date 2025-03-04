@@ -13,7 +13,7 @@ import { Users } from "./Users";
 
 @Index("print_rips_rip_template_id_index", ["ripTemplateId"], {})
 @Index("print_rips_user_id_index", ["userId"], {})
-@Entity("print_rips", { schema: "mydatabase" })
+@Entity("print_rips", { schema: "modema" })
 export class PrintRips {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

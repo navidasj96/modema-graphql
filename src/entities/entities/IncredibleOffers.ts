@@ -17,7 +17,7 @@ import { Products } from "./Products";
 )
 @Index("incredible_offers_discount_id_index", ["discountId"], {})
 @Index("incredible_offers_product_id_index", ["productId"], {})
-@Entity("incredible_offers", { schema: "mydatabase" })
+@Entity("incredible_offers", { schema: "modema" })
 export class IncredibleOffers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

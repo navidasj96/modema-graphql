@@ -80,7 +80,7 @@ import { ReturnedInvoices } from "./ReturnedInvoices";
 @Index("invoices_visitor_group_id_index", ["visitorGroupId"], {})
 @Index("invoices_visitor_id_index", ["visitorId"], {})
 @Index("issue_date", ["issueDate"], {})
-@Entity("invoices", { schema: "mydatabase" })
+@Entity("invoices", { schema: "modema" })
 export class Invoices {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

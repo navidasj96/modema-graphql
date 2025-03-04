@@ -48,7 +48,7 @@ import { Subproducts } from "./Subproducts";
 @Index("discount_subjects_product_category_id_index", ["productCategoryId"], {})
 @Index("discount_subjects_product_id_index", ["productId"], {})
 @Index("discount_subjects_subproduct_id_index", ["subproductId"], {})
-@Entity("discount_subjects", { schema: "mydatabase" })
+@Entity("discount_subjects", { schema: "modema" })
 export class DiscountSubjects {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -12,7 +12,7 @@ import { Users } from "./Users";
 @Index("campaign_instagram_follows_phone_unique", ["phone"], { unique: true })
 @Index("campaign_instagram_follows_sex_index", ["sex"], {})
 @Index("campaign_instagram_follows_user_id_index", ["userId"], {})
-@Entity("campaign_instagram_follows", { schema: "mydatabase" })
+@Entity("campaign_instagram_follows", { schema: "modema" })
 export class CampaignInstagramFollows {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

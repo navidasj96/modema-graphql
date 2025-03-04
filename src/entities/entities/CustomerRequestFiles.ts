@@ -13,7 +13,7 @@ import { CustomerRequests } from "./CustomerRequests";
   ["customerRequestId"],
   {}
 )
-@Entity("customer_request_files", { schema: "mydatabase" })
+@Entity("customer_request_files", { schema: "modema" })
 export class CustomerRequestFiles {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

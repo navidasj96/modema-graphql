@@ -17,7 +17,7 @@ import { Users } from "./Users";
 )
 @Index("subproduct_stock_histories_subproduct_id_index", ["subproductId"], {})
 @Index("subproduct_stock_histories_user_id_index", ["userId"], {})
-@Entity("subproduct_stock_histories", { schema: "mydatabase" })
+@Entity("subproduct_stock_histories", { schema: "modema" })
 export class SubproductStockHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

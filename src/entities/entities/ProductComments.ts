@@ -20,7 +20,7 @@ import { WalletGiftCharges } from "./WalletGiftCharges";
 @Index("product_comments_product_id_index", ["productId"], {})
 @Index("product_comments_subproduct_id_index", ["subproductId"], {})
 @Index("product_comments_user_id_index", ["userId"], {})
-@Entity("product_comments", { schema: "mydatabase" })
+@Entity("product_comments", { schema: "modema" })
 export class ProductComments {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

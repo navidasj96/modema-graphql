@@ -22,7 +22,7 @@ import { Users } from "./Users";
 @Index("user_carts_related_subproduct_id_index", ["relatedSubproductId"], {})
 @Index("user_carts_subproduct_id_index", ["subproductId"], {})
 @Index("user_carts_user_id_index", ["userId"], {})
-@Entity("user_carts", { schema: "mydatabase" })
+@Entity("user_carts", { schema: "modema" })
 export class UserCarts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

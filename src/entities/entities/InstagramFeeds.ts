@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Index("instagram_feeds_instagramid_unique", ["instagramId"], { unique: true })
-@Entity("instagram_feeds", { schema: "mydatabase" })
+@Entity("instagram_feeds", { schema: "modema" })
 export class InstagramFeeds {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

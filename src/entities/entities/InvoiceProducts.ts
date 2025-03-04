@@ -38,7 +38,7 @@ import { SubproductStockHistories } from "./SubproductStockHistories";
   {}
 )
 @Index("invoice_products_subproduct_id_index", ["subproductId"], {})
-@Entity("invoice_products", { schema: "mydatabase" })
+@Entity("invoice_products", { schema: "modema" })
 export class InvoiceProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

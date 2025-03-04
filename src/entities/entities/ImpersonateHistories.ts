@@ -14,7 +14,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("impersonate_histories_user_id_index", ["userId"], {})
-@Entity("impersonate_histories", { schema: "mydatabase" })
+@Entity("impersonate_histories", { schema: "modema" })
 export class ImpersonateHistories {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

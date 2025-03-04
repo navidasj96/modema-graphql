@@ -9,7 +9,7 @@ import { ProductCategories } from "./ProductCategories";
 
 @Index("image_sizes_name_unique", ["name"], { unique: true })
 @Index("image_sizes_short_name_unique", ["shortName"], { unique: true })
-@Entity("image_sizes", { schema: "mydatabase" })
+@Entity("image_sizes", { schema: "modema" })
 export class ImageSizes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

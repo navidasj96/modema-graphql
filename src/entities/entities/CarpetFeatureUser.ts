@@ -11,7 +11,7 @@ import { Users } from "./Users";
 
 @Index("carpet_feature_user_carpet_feature_id_index", ["carpetFeatureId"], {})
 @Index("carpet_feature_user_user_id_index", ["userId"], {})
-@Entity("carpet_feature_user", { schema: "mydatabase" })
+@Entity("carpet_feature_user", { schema: "modema" })
 export class CarpetFeatureUser {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

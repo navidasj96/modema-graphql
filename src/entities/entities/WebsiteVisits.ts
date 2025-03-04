@@ -5,7 +5,7 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 @Index("website_visits_day_sh_index", ["daySh"], {})
 @Index("website_visits_month_sh_index", ["monthSh"], {})
 @Index("website_visits_year_sh_index", ["yearSh"], {})
-@Entity("website_visits", { schema: "mydatabase" })
+@Entity("website_visits", { schema: "modema" })
 export class WebsiteVisits {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

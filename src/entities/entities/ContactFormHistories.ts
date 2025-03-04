@@ -17,7 +17,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("contact_form_histories_user_id_index", ["userId"], {})
-@Entity("contact_form_histories", { schema: "mydatabase" })
+@Entity("contact_form_histories", { schema: "modema" })
 export class ContactFormHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

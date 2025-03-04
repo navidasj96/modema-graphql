@@ -15,7 +15,7 @@ import { Users } from "./Users";
 )
 @Index("campaign_subscriptions_code_index", ["code"], {})
 @Index("campaign_subscriptions_user_id_index", ["userId"], {})
-@Entity("campaign_subscriptions", { schema: "mydatabase" })
+@Entity("campaign_subscriptions", { schema: "modema" })
 export class CampaignSubscriptions {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

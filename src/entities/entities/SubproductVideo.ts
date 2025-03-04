@@ -16,7 +16,7 @@ import { Videos } from "./Videos";
   ["videoId", "subproductId"],
   { unique: true }
 )
-@Entity("subproduct_video", { schema: "mydatabase" })
+@Entity("subproduct_video", { schema: "modema" })
 export class SubproductVideo {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

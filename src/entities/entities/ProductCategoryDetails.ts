@@ -5,7 +5,7 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
   ["productCategoryId"],
   {}
 )
-@Entity("product_category_details", { schema: "mydatabase" })
+@Entity("product_category_details", { schema: "modema" })
 export class ProductCategoryDetails {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

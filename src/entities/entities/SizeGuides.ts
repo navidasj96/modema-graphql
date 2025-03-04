@@ -12,7 +12,7 @@ import { SizeGuidesDetails } from "./SizeGuidesDetails";
 
 @Index("size_guides_image_id_index", ["imageId"], {})
 @Index("size_guides_title_index", ["title"], {})
-@Entity("size_guides", { schema: "mydatabase" })
+@Entity("size_guides", { schema: "modema" })
 export class SizeGuides {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

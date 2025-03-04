@@ -9,7 +9,7 @@ import { CarpetUsagePlaceInvoiceProduct } from "./CarpetUsagePlaceInvoiceProduct
 import { CarpetUsagePlaceUser } from "./CarpetUsagePlaceUser";
 
 @Index("carpet_usage_places_sort_order_index", ["sortOrder"], {})
-@Entity("carpet_usage_places", { schema: "mydatabase" })
+@Entity("carpet_usage_places", { schema: "modema" })
 export class CarpetUsagePlaces {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

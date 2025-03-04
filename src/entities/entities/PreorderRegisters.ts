@@ -19,7 +19,7 @@ import { InvoicePaymentTypes } from "./InvoicePaymentTypes";
 @Index("preorder_registers_payment_type_id_index", ["paymentTypeId"], {})
 @Index("preorder_registers_preorder_number_index", ["preorderNumber"], {})
 @Index("preorder_registers_user_id_index", ["userId"], {})
-@Entity("preorder_registers", { schema: "mydatabase" })
+@Entity("preorder_registers", { schema: "modema" })
 export class PreorderRegisters {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

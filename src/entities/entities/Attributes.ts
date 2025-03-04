@@ -11,7 +11,7 @@ import { AttributeProduct } from "./AttributeProduct";
 import { AttributeSubproduct } from "./AttributeSubproduct";
 
 @Index("attributes_name_unique", ["name"], { unique: true })
-@Entity("attributes", { schema: "mydatabase" })
+@Entity("attributes", { schema: "modema" })
 export class Attributes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

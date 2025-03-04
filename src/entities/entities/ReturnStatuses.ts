@@ -10,7 +10,7 @@ import { ReturnRequestReturnStatus } from "./ReturnRequestReturnStatus";
 import { ReturnRequests } from "./ReturnRequests";
 
 @Index("return_statuses_name_unique", ["name"], { unique: true })
-@Entity("return_statuses", { schema: "mydatabase" })
+@Entity("return_statuses", { schema: "modema" })
 export class ReturnStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

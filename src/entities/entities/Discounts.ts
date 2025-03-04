@@ -21,7 +21,7 @@ import { InvoiceProducts } from "./InvoiceProducts";
 @Index("discounts_type_index", ["type"], {})
 @Index("discounts_updated_by_index", ["updatedBy"], {})
 @Index("discounts_with_pad_index", ["withPad"], {})
-@Entity("discounts", { schema: "mydatabase" })
+@Entity("discounts", { schema: "modema" })
 export class Discounts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

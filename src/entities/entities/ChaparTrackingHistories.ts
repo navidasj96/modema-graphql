@@ -9,7 +9,7 @@ import {
 import { Invoices } from "./Invoices";
 
 @Index("chapar_tracking_histories_invoice_id_index", ["invoiceId"], {})
-@Entity("chapar_tracking_histories", { schema: "mydatabase" })
+@Entity("chapar_tracking_histories", { schema: "modema" })
 export class ChaparTrackingHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

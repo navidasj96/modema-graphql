@@ -15,7 +15,7 @@ import { Attributes } from "./Attributes";
   {}
 )
 @Index("attribute_attribute_group_attribute_id_index", ["attributeId"], {})
-@Entity("attribute_attribute_group", { schema: "mydatabase" })
+@Entity("attribute_attribute_group", { schema: "modema" })
 export class AttributeAttributeGroup {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

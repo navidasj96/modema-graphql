@@ -20,7 +20,7 @@ import { InvoicePaymentTypes } from "./InvoicePaymentTypes";
   {}
 )
 @Index("invoice_payments_user_id_index", ["userId"], {})
-@Entity("invoice_payments", { schema: "mydatabase" })
+@Entity("invoice_payments", { schema: "modema" })
 export class InvoicePayments {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

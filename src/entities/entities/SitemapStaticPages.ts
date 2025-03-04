@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("sitemap_static_pages", { schema: "mydatabase" })
+@Entity("sitemap_static_pages", { schema: "modema" })
 export class SitemapStaticPages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

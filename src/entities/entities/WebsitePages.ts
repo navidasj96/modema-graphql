@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
-@Index("website_pages_page_key_unique", ["page", "key"], { unique: true })
-@Entity("website_pages", { schema: "mydatabase" })
+@Index("website_pages_page_key_unique", ["key", "page"], { unique: true })
+@Entity("website_pages", { schema: "modema" })
 export class WebsitePages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

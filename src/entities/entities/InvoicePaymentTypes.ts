@@ -3,7 +3,7 @@ import { InvoicePaymentHistories } from "./InvoicePaymentHistories";
 import { InvoicePayments } from "./InvoicePayments";
 import { PreorderRegisters } from "./PreorderRegisters";
 
-@Entity("invoice_payment_types", { schema: "mydatabase" })
+@Entity("invoice_payment_types", { schema: "modema" })
 export class InvoicePaymentTypes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

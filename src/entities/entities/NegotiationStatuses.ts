@@ -9,7 +9,7 @@ import { NegotiationHistories } from "./NegotiationHistories";
 import { Negotiations } from "./Negotiations";
 
 @Index("negotiation_statuses_name_index", ["name"], {})
-@Entity("negotiation_statuses", { schema: "mydatabase" })
+@Entity("negotiation_statuses", { schema: "modema" })
 export class NegotiationStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

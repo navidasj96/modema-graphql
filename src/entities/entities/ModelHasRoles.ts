@@ -6,7 +6,7 @@ import { Roles } from "./Roles";
   ["modelType", "modelId"],
   {}
 )
-@Entity("model_has_roles", { schema: "mydatabase" })
+@Entity("model_has_roles", { schema: "modema" })
 export class ModelHasRoles {
   @Column("int", { primary: true, name: "role_id", unsigned: true })
   roleId: number;

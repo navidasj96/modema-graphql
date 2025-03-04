@@ -4,41 +4,46 @@ import {
   Index,
   OneToMany,
   PrimaryGeneratedColumn,
-} from "typeorm";
-import { Subproducts } from "./Subproducts";
+} from 'typeorm';
+import { Subproducts } from './Subproducts';
+import { Field, ObjectType } from '@nestjs/graphql';
 
-@Index("basic_carpet_brands_code_unique", ["code"], { unique: true })
-@Index("basic_carpet_brands_title_unique", ["title"], { unique: true })
-@Index("sort_order", ["sortOrder"], {})
-@Entity("basic_carpet_brands", { schema: "mydatabase" })
+@Index('basic_carpet_brands_code_unique', ['code'], { unique: true })
+@Index('basic_carpet_brands_title_unique', ['title'], { unique: true })
+@Index('sort_order', ['sortOrder'], {})
+@Entity('basic_carpet_brands', { schema: 'modema' })
+@ObjectType()
 export class BasicCarpetBrands {
-  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+  @Field()
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id', unsigned: true })
   id: number;
-
-  @Column("varchar", { name: "title", unique: true, length: 191 })
+  @Field()
+  @Column('varchar', { name: 'title', unique: true, length: 191 })
   title: string;
-
-  @Column("varchar", { name: "code", unique: true, length: 3 })
+  @Field()
+  @Column('varchar', { name: 'code', unique: true, length: 3 })
   code: string;
-
-  @Column("int", { name: "sort_order", nullable: true, unsigned: true })
+  @Field()
+  @Column('int', { name: 'sort_order', nullable: true, unsigned: true })
   sortOrder: number | null;
 
-  @Column("tinyint", { name: "is_active", width: 1, default: () => "'1'" })
+  @Field()
+  @Column('tinyint', { name: 'is_active', width: 1, default: () => "'1'" })
   isActive: boolean;
-
-  @Column("timestamp", {
-    name: "created_at",
-    default: () => "CURRENT_TIMESTAMP",
+  @Field()
+  @Column('timestamp', {
+    name: 'created_at',
+    default: () => 'CURRENT_TIMESTAMP',
   })
   createdAt: Date;
-
-  @Column("timestamp", {
-    name: "updated_at",
+  @Field()
+  @Column('timestamp', {
+    name: 'updated_at',
     default: () => "'0000-00-00 00:00:00'",
   })
   updatedAt: Date;
 
+  @Field()
   @OneToMany(() => Subproducts, (subproducts) => subproducts.basicCarpetBrand)
   subproducts: Subproducts[];
 }

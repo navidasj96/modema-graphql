@@ -19,7 +19,7 @@ import { Subproducts } from "./Subproducts";
 @Index("torob_products_basic_carpet_size_id_foreign", ["basicCarpetSizeId"], {})
 @Index("torob_products_product_id_foreign", ["productId"], {})
 @Index("torob_products_subproduct_id_foreign", ["subproductId"], {})
-@Entity("torob_products", { schema: "mydatabase" })
+@Entity("torob_products", { schema: "modema" })
 export class TorobProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

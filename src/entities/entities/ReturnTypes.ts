@@ -9,7 +9,7 @@ import { ReturnRequestHistories } from "./ReturnRequestHistories";
 import { ReturnRequests } from "./ReturnRequests";
 
 @Index("return_types_name_unique", ["name"], { unique: true })
-@Entity("return_types", { schema: "mydatabase" })
+@Entity("return_types", { schema: "modema" })
 export class ReturnTypes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

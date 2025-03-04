@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { CampaignFreeOfferSizes } from "./CampaignFreeOfferSizes";
 
-@Entity("campaign_free_offers", { schema: "mydatabase" })
+@Entity("campaign_free_offers", { schema: "modema" })
 export class CampaignFreeOffers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

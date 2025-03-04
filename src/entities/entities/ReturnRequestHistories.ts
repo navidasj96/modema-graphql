@@ -33,7 +33,7 @@ import { ReturnRequestItemHistories } from "./ReturnRequestItemHistories";
 )
 @Index("return_request_histories_return_type_id_index", ["returnTypeId"], {})
 @Index("return_request_histories_user_id_index", ["userId"], {})
-@Entity("return_request_histories", { schema: "mydatabase" })
+@Entity("return_request_histories", { schema: "modema" })
 export class ReturnRequestHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

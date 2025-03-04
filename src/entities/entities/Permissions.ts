@@ -15,7 +15,7 @@ import { Roles } from "./Roles";
 
 @Index("permissions_parent_id_index", ["parentId"], {})
 @Index("permissions_permission_group_id_index", ["permissionGroupId"], {})
-@Entity("permissions", { schema: "mydatabase" })
+@Entity("permissions", { schema: "modema" })
 export class Permissions {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
@@ -71,7 +71,7 @@ export class Permissions {
     name: "role_has_permissions",
     joinColumns: [{ name: "permission_id", referencedColumnName: "id" }],
     inverseJoinColumns: [{ name: "role_id", referencedColumnName: "id" }],
-    schema: "mydatabase",
+    schema: "modema",
   })
   roles: Roles[];
 }

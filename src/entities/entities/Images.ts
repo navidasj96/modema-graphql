@@ -19,7 +19,7 @@ import { SubproductSpecialImages } from "./SubproductSpecialImages";
 import { Subproducts } from "./Subproducts";
 import { Tags } from "./Tags";
 
-@Entity("images", { schema: "mydatabase" })
+@Entity("images", { schema: "modema" })
 export class Images {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

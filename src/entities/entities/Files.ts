@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { FileNegotiation } from "./FileNegotiation";
 
-@Entity("files", { schema: "mydatabase" })
+@Entity("files", { schema: "modema" })
 export class Files {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -11,7 +11,7 @@ import { Products } from "./Products";
 
 @Index("customer_image_product_image_id_index", ["imageId"], {})
 @Index("customer_image_product_product_id_index", ["productId"], {})
-@Entity("customer_image_product", { schema: "mydatabase" })
+@Entity("customer_image_product", { schema: "modema" })
 export class CustomerImageProduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

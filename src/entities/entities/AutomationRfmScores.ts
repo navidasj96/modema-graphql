@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("automation_rfm_scores", { schema: "mydatabase" })
+@Entity("automation_rfm_scores", { schema: "modema" })
 export class AutomationRfmScores {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

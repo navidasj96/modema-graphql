@@ -2,7 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { InvoiceProductItemInvoiceProductStatus } from "./InvoiceProductItemInvoiceProductStatus";
 import { InvoiceProductItems } from "./InvoiceProductItems";
 
-@Entity("invoice_product_statuses", { schema: "mydatabase" })
+@Entity("invoice_product_statuses", { schema: "modema" })
 export class InvoiceProductStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -23,7 +23,7 @@ import { Users } from "./Users";
 )
 @Index("return_request_addresses_state_id_index", ["stateId"], {})
 @Index("return_request_addresses_user_id_index", ["userId"], {})
-@Entity("return_request_addresses", { schema: "mydatabase" })
+@Entity("return_request_addresses", { schema: "modema" })
 export class ReturnRequestAddresses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

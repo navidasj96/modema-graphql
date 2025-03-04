@@ -23,7 +23,7 @@ import { Subproducts } from "./Subproducts";
   {}
 )
 @Index("returned_invoice_products_subproduct_id_index", ["subproductId"], {})
-@Entity("returned_invoice_products", { schema: "mydatabase" })
+@Entity("returned_invoice_products", { schema: "modema" })
 export class ReturnedInvoiceProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

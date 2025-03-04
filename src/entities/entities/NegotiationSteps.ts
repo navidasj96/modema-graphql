@@ -13,7 +13,7 @@ import { Users } from "./Users";
 @Index("negotiation_steps_negotiation_id_index", ["negotiationId"], {})
 @Index("negotiation_steps_negotiation_type_id_index", ["negotiationTypeId"], {})
 @Index("negotiation_steps_submitted_by_index", ["submittedBy"], {})
-@Entity("negotiation_steps", { schema: "mydatabase" })
+@Entity("negotiation_steps", { schema: "modema" })
 export class NegotiationSteps {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

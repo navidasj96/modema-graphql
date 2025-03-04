@@ -11,7 +11,7 @@ import { CustomerRequestFiles } from "./CustomerRequestFiles";
 import { Users } from "./Users";
 
 @Index("customer_requests_user_id_index", ["userId"], {})
-@Entity("customer_requests", { schema: "mydatabase" })
+@Entity("customer_requests", { schema: "modema" })
 export class CustomerRequests {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

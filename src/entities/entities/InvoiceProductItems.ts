@@ -32,7 +32,7 @@ import { ProductionRolls } from "./ProductionRolls";
   {}
 )
 @Index("invoice_product_items_row_index", ["row"], {})
-@Entity("invoice_product_items", { schema: "mydatabase" })
+@Entity("invoice_product_items", { schema: "modema" })
 export class InvoiceProductItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

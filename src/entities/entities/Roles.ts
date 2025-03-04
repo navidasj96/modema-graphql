@@ -8,7 +8,7 @@ import {
 import { ModelHasRoles } from "./ModelHasRoles";
 import { Permissions } from "./Permissions";
 
-@Entity("roles", { schema: "mydatabase" })
+@Entity("roles", { schema: "modema" })
 export class Roles {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

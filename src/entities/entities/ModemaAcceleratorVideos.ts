@@ -13,7 +13,7 @@ import { ModemaAccelerators } from "./ModemaAccelerators";
   ["modemaAcceleratorId"],
   {}
 )
-@Entity("modema_accelerator_videos", { schema: "mydatabase" })
+@Entity("modema_accelerator_videos", { schema: "modema" })
 export class ModemaAcceleratorVideos {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

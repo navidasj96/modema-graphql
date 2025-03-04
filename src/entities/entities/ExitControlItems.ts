@@ -15,7 +15,7 @@ import { InvoiceProductItems } from "./InvoiceProductItems";
   ["invoiceProductItemId"],
   {}
 )
-@Entity("exit_control_items", { schema: "mydatabase" })
+@Entity("exit_control_items", { schema: "modema" })
 export class ExitControlItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -14,7 +14,7 @@ import { AttributeSubproduct } from "./AttributeSubproduct";
 
 @Index("attribute_group_id", ["attributeGroupId"], {})
 @Index("attribute_items_attribute_id_index", ["attributeId"], {})
-@Entity("attribute_items", { schema: "mydatabase" })
+@Entity("attribute_items", { schema: "modema" })
 export class AttributeItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -2,7 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { ProductionPadProductionPadStatus } from "./ProductionPadProductionPadStatus";
 import { ProductionPads } from "./ProductionPads";
 
-@Entity("production_pad_statuses", { schema: "mydatabase" })
+@Entity("production_pad_statuses", { schema: "modema" })
 export class ProductionPadStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

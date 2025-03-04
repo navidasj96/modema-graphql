@@ -27,7 +27,7 @@ import { InvoiceHistories } from "./InvoiceHistories";
 @Index("invoice_addresses_invoice_id_index", ["invoiceId"], {})
 @Index("invoice_addresses_state_id_index", ["stateId"], {})
 @Index("invoice_addresses_user_id_index", ["userId"], {})
-@Entity("invoice_addresses", { schema: "mydatabase" })
+@Entity("invoice_addresses", { schema: "modema" })
 export class InvoiceAddresses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

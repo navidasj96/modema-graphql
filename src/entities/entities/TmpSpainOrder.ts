@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("tmp_spain_order", { schema: "mydatabase" })
+@Entity("tmp_spain_order", { schema: "modema" })
 export class TmpSpainOrder {
   @Column("int", { primary: true, name: "row" })
   row: number;

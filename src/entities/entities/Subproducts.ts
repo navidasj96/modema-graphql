@@ -61,23 +61,23 @@ import { UserCarts } from "./UserCarts";
 @Index("subproducts_code_unique", ["code"], { unique: true })
 @Index("subproducts_image_id_index", ["imageId"], {})
 @Index("subproducts_is_active_index", ["isActive"], {})
-@Index("subproducts_name_unique", ["name", "productId"], { unique: true })
+@Index("subproducts_name_unique", ["productId", "name"], { unique: true })
 @Index("subproducts_pad_price_index", ["padPrice"], {})
 @Index("subproducts_price_index", ["price"], {})
 @Index(
   "subproducts_prod_id_size_id_color_id_unique",
   [
     "productId",
+    "basicCarpetDesignerId",
     "basicCarpetSizeId",
     "basicCarpetColorId",
-    "basicCarpetDesignerId",
   ],
   { unique: true }
 )
 @Index("subproducts_product_id_index", ["productId"], {})
 @Index("subproducts_short_code_index", ["shortCode"], {})
 @Index("subproducts_video_id_index", ["videoId"], {})
-@Entity("subproducts", { schema: "mydatabase" })
+@Entity("subproducts", { schema: "modema" })
 export class Subproducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

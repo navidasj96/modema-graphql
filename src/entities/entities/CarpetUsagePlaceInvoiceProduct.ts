@@ -19,7 +19,7 @@ import { InvoiceProducts } from "./InvoiceProducts";
   ["invoiceProductId"],
   {}
 )
-@Entity("carpet_usage_place_invoice_product", { schema: "mydatabase" })
+@Entity("carpet_usage_place_invoice_product", { schema: "modema" })
 export class CarpetUsagePlaceInvoiceProduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

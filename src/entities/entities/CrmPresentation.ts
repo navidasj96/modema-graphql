@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("crm_presentation", { schema: "mydatabase" })
+@Entity("crm_presentation", { schema: "modema" })
 export class CrmPresentation {
   @Column("varchar", { name: "mobile", nullable: true, length: 15 })
   mobile: string | null;

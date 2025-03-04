@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("tmp_tag_changes_print", { schema: "mydatabase" })
+@Entity("tmp_tag_changes_print", { schema: "modema" })
 export class TmpTagChangesPrint {
   @PrimaryGeneratedColumn({ type: "int", name: "id" })
   id: number;

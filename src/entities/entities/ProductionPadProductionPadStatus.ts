@@ -17,7 +17,7 @@ import { ProductionPadStatuses } from "./ProductionPadStatuses";
   {}
 )
 @Index("production_pad_production_pad_status_user_id_index", ["userId"], {})
-@Entity("production_pad_production_pad_status", { schema: "mydatabase" })
+@Entity("production_pad_production_pad_status", { schema: "modema" })
 export class ProductionPadProductionPadStatus {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

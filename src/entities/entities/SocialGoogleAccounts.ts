@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("social_google_accounts_user_id_index", ["userId"], {})
-@Entity("social_google_accounts", { schema: "mydatabase" })
+@Entity("social_google_accounts", { schema: "modema" })
 export class SocialGoogleAccounts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("incredible_offer_sent_notifications_user_id_index", ["userId"], {})
-@Entity("incredible_offer_sent_notifications", { schema: "mydatabase" })
+@Entity("incredible_offer_sent_notifications", { schema: "modema" })
 export class IncredibleOfferSentNotifications {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

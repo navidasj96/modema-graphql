@@ -15,7 +15,7 @@ import { RipTemplates } from "./RipTemplates";
   {}
 )
 @Index("rip_template_items_rip_template_id_index", ["ripTemplateId"], {})
-@Entity("rip_template_items", { schema: "mydatabase" })
+@Entity("rip_template_items", { schema: "modema" })
 export class RipTemplateItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

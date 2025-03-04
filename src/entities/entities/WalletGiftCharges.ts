@@ -16,7 +16,7 @@ import { Wallets } from "./Wallets";
 })
 @Index("wallet_gift_charges_user_id_index", ["userId"], {})
 @Index("wallet_gift_charges_wallet_id_index", ["walletId"], {})
-@Entity("wallet_gift_charges", { schema: "mydatabase" })
+@Entity("wallet_gift_charges", { schema: "modema" })
 export class WalletGiftCharges {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

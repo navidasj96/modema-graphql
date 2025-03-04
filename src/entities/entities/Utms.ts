@@ -12,7 +12,7 @@ import { UserUtm } from "./UserUtm";
   ["utmSource", "utmMedium", "utmCampaign", "utmContent"],
   { unique: true }
 )
-@Entity("utms", { schema: "mydatabase" })
+@Entity("utms", { schema: "modema" })
 export class Utms {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

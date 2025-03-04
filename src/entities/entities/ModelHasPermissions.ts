@@ -6,7 +6,7 @@ import { Permissions } from "./Permissions";
   ["modelType", "modelId"],
   {}
 )
-@Entity("model_has_permissions", { schema: "mydatabase" })
+@Entity("model_has_permissions", { schema: "modema" })
 export class ModelHasPermissions {
   @Column("int", { primary: true, name: "permission_id", unsigned: true })
   permissionId: number;

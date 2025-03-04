@@ -18,7 +18,7 @@ import { Products } from "./Products";
   ["wonderfulOfferProductId"],
   {}
 )
-@Entity("special_offers", { schema: "mydatabase" })
+@Entity("special_offers", { schema: "modema" })
 export class SpecialOffers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -3,7 +3,7 @@ import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 @Index("carpet_sizes_width_length_unique", ["width", "length"], {
   unique: true,
 })
-@Entity("carpet_sizes", { schema: "mydatabase" })
+@Entity("carpet_sizes", { schema: "modema" })
 export class CarpetSizes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -18,7 +18,7 @@ import { SenderInformations } from "./SenderInformations";
 @Index("cities_mahex_code_index", ["mahexCode"], {})
 @Index("cities_state_id_index", ["stateId"], {})
 @Index("cities_tipax_id_index", ["tipaxId"], {})
-@Entity("cities", { schema: "mydatabase" })
+@Entity("cities", { schema: "modema" })
 export class Cities {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -1,42 +1,42 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { CustomerVideoProduct } from './CustomerVideoProduct';
-import { ProductVideo } from './ProductVideo';
-import { ReturnRequestItemVideos } from './ReturnRequestItemVideos';
-import { SubproductVideo } from './SubproductVideo';
-import { Subproducts } from './Subproducts';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { CustomerVideoProduct } from "./CustomerVideoProduct";
+import { ProductVideo } from "./ProductVideo";
+import { ReturnRequestItemVideos } from "./ReturnRequestItemVideos";
+import { SubproductVideo } from "./SubproductVideo";
+import { Subproducts } from "./Subproducts";
 
-@Entity('videos', { schema: 'mydatabase' })
+@Entity("videos", { schema: "modema" })
 export class Videos {
-  @PrimaryGeneratedColumn({ type: 'int', name: 'id', unsigned: true })
+  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
 
-  @Column('varchar', { name: 'filename', length: 191 })
+  @Column("varchar", { name: "filename", length: 191 })
   filename: string;
 
-  @Column('varchar', { name: 'mime', length: 191 })
+  @Column("varchar", { name: "mime", length: 191 })
   mime: string;
 
-  @Column('varchar', { name: 'original_filename', length: 191 })
+  @Column("varchar", { name: "original_filename", length: 191 })
   originalFilename: string;
 
-  @Column('varchar', { name: 'upload_source', length: 191 })
+  @Column("varchar", { name: "upload_source", length: 191 })
   uploadSource: string;
 
-  @Column('varchar', { name: 'path', length: 191, default: () => "'/'" })
+  @Column("varchar", { name: "path", length: 191, default: () => "'/'" })
   path: string;
 
-  @Column('varchar', { name: 'alt_text', nullable: true, length: 191 })
+  @Column("varchar", { name: "alt_text", nullable: true, length: 191 })
   altText: string | null;
 
-  @Column('timestamp', { name: 'created_at', nullable: true })
+  @Column("timestamp", { name: "created_at", nullable: true })
   createdAt: Date | null;
 
-  @Column('timestamp', { name: 'updated_at', nullable: true })
+  @Column("timestamp", { name: "updated_at", nullable: true })
   updatedAt: Date | null;
 
   @OneToMany(
     () => CustomerVideoProduct,
-    (customerVideoProduct) => customerVideoProduct.video,
+    (customerVideoProduct) => customerVideoProduct.video
   )
   customerVideoProducts: CustomerVideoProduct[];
 
@@ -45,7 +45,7 @@ export class Videos {
 
   @OneToMany(
     () => ReturnRequestItemVideos,
-    (returnRequestItemVideos) => returnRequestItemVideos.video,
+    (returnRequestItemVideos) => returnRequestItemVideos.video
   )
   returnRequestItemVideos: ReturnRequestItemVideos[];
 

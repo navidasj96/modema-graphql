@@ -11,7 +11,7 @@ import { ExitControlItems } from "./ExitControlItems";
 import { Users } from "./Users";
 
 @Index("exit_controls_user_id_index", ["userId"], {})
-@Entity("exit_controls", { schema: "mydatabase" })
+@Entity("exit_controls", { schema: "modema" })
 export class ExitControls {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

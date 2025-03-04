@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Index("redis_saved_keys_redis_key_unique", ["redisKey"], { unique: true })
-@Entity("redis_saved_keys", { schema: "mydatabase" })
+@Entity("redis_saved_keys", { schema: "modema" })
 export class RedisSavedKeys {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

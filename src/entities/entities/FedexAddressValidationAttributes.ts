@@ -1,6 +1,6 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("fedex_address_validation_attributes", { schema: "mydatabase" })
+@Entity("fedex_address_validation_attributes", { schema: "modema" })
 export class FedexAddressValidationAttributes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

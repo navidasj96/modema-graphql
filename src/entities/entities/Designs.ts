@@ -20,7 +20,7 @@ import { UserCarts } from "./UserCarts";
 @Index("carpet_material_id", ["carpetMaterialId"], {})
 @Index("designs_carpet_shape_id_index", ["carpetShapeId"], {})
 @Index("designs_user_id_index", ["userId"], {})
-@Entity("designs", { schema: "mydatabase" })
+@Entity("designs", { schema: "modema" })
 export class Designs {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

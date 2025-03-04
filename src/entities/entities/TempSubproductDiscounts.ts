@@ -32,7 +32,7 @@ import { Column, Entity, Index } from "typeorm";
   {}
 )
 @Index("temp_subproduct_discounts_view_product_id_index", ["viewProductId"], {})
-@Entity("temp_subproduct_discounts", { schema: "mydatabase" })
+@Entity("temp_subproduct_discounts", { schema: "modema" })
 export class TempSubproductDiscounts {
   @Column("int", { primary: true, name: "view_subproduct_id" })
   viewSubproductId: number;

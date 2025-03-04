@@ -9,7 +9,7 @@ import {
 import { Designs } from "./Designs";
 
 @Index("image_layers_design_id_index", ["designId"], {})
-@Entity("image_layers", { schema: "mydatabase" })
+@Entity("image_layers", { schema: "modema" })
 export class ImageLayers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("verify_users_user_id_index", ["userId"], {})
-@Entity("verify_users", { schema: "mydatabase" })
+@Entity("verify_users", { schema: "modema" })
 export class VerifyUsers {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -3,7 +3,7 @@ import { ProductCategoryRate } from "./ProductCategoryRate";
 import { ProductRate } from "./ProductRate";
 import { ProductRateAverages } from "./ProductRateAverages";
 
-@Entity("rates", { schema: "mydatabase" })
+@Entity("rates", { schema: "modema" })
 export class Rates {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

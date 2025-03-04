@@ -19,7 +19,7 @@ import { CampaignFreeOffers } from "./CampaignFreeOffers";
   ["campaignFreeOfferId"],
   {}
 )
-@Entity("campaign_free_offer_sizes", { schema: "mydatabase" })
+@Entity("campaign_free_offer_sizes", { schema: "modema" })
 export class CampaignFreeOfferSizes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

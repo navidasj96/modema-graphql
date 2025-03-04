@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("campaign_gold_coin_subs_user_id_unique", ["userId"], { unique: true })
-@Entity("campaign_gold_coin_subs", { schema: "mydatabase" })
+@Entity("campaign_gold_coin_subs", { schema: "modema" })
 export class CampaignGoldCoinSubs {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

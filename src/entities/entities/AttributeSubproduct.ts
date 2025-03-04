@@ -13,7 +13,7 @@ import { Subproducts } from "./Subproducts";
 @Index("attribute_subproduct_attribute_id_index", ["attributeId"], {})
 @Index("attribute_subproduct_attribute_item_id_index", ["attributeItemId"], {})
 @Index("attribute_subproduct_subproduct_id_index", ["subproductId"], {})
-@Entity("attribute_subproduct", { schema: "mydatabase" })
+@Entity("attribute_subproduct", { schema: "modema" })
 export class AttributeSubproduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

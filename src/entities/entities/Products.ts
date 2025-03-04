@@ -73,7 +73,7 @@ import { WonderfulOffers } from "./WonderfulOffers";
 @Index("products_price_group_id_index", ["priceGroupId"], {})
 @Index("products_russian_name_unique", ["russianName"], { unique: true })
 @Index("sort_order", ["sortOrder"], {})
-@Entity("products", { schema: "mydatabase" })
+@Entity("products", { schema: "modema" })
 export class Products {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

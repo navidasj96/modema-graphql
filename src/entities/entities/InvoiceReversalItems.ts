@@ -19,7 +19,7 @@ import { InvoiceReversals } from "./InvoiceReversals";
   ["invoiceReversalId"],
   {}
 )
-@Entity("invoice_reversal_items", { schema: "mydatabase" })
+@Entity("invoice_reversal_items", { schema: "modema" })
 export class InvoiceReversalItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

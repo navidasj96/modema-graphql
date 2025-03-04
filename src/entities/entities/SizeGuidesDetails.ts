@@ -16,7 +16,7 @@ import { SizeGuides } from "./SizeGuides";
 @Index("size_guides_details_image_id_index", ["imageId"], {})
 @Index("size_guides_details_size_guide_id_index", ["sizeGuideId"], {})
 @Index("size_guides_details_title_index", ["title"], {})
-@Entity("size_guides_details", { schema: "mydatabase" })
+@Entity("size_guides_details", { schema: "modema" })
 export class SizeGuidesDetails {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

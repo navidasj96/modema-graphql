@@ -13,7 +13,7 @@ import { PriceGroups } from "./PriceGroups";
 @Index("price_group_size_bundle_pad_price_index", ["bundlePadPrice"], {})
 @Index("price_group_size_bundle_price_index", ["bundlePrice"], {})
 @Index("price_group_size_price_group_id_index", ["priceGroupId"], {})
-@Entity("price_group_size", { schema: "mydatabase" })
+@Entity("price_group_size", { schema: "modema" })
 export class PriceGroupSize {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

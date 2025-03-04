@@ -19,7 +19,7 @@ import { Subproducts } from "./Subproducts";
 @Index("preorders_sales_person_id_index", ["salesPersonId"], {})
 @Index("preorders_subproduct_id_index", ["subproductId"], {})
 @Index("preorders_user_id_index", ["userId"], {})
-@Entity("preorders", { schema: "mydatabase" })
+@Entity("preorders", { schema: "modema" })
 export class Preorders {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

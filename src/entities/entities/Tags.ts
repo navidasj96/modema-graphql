@@ -12,7 +12,7 @@ import { Images } from "./Images";
 
 @Index("slider_image_id", ["sliderImageId"], {})
 @Index("tags_image_id_index", ["imageId"], {})
-@Entity("tags", { schema: "mydatabase" })
+@Entity("tags", { schema: "modema" })
 export class Tags {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

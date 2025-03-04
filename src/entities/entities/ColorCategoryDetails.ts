@@ -13,7 +13,7 @@ import { ColorCategories } from "./ColorCategories";
   ["colorCategoryId"],
   {}
 )
-@Entity("color_category_details", { schema: "mydatabase" })
+@Entity("color_category_details", { schema: "modema" })
 export class ColorCategoryDetails {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

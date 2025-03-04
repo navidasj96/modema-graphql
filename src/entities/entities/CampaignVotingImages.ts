@@ -11,7 +11,7 @@ import { Images } from "./Images";
 @Index("campaign_voting_images_campaign_no_index", ["campaignNo"], {})
 @Index("campaign_voting_images_image_id_index", ["imageId"], {})
 @Index("campaign_voting_images_sort_order_index", ["sortOrder"], {})
-@Entity("campaign_voting_images", { schema: "mydatabase" })
+@Entity("campaign_voting_images", { schema: "modema" })
 export class CampaignVotingImages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

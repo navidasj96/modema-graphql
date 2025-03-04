@@ -11,7 +11,7 @@ import { Invoices } from "./Invoices";
 
 @Index("invoice_address_validation_results_address_id_index", ["addressId"], {})
 @Index("invoice_address_validation_results_invoice_id_index", ["invoiceId"], {})
-@Entity("invoice_address_validation_results", { schema: "mydatabase" })
+@Entity("invoice_address_validation_results", { schema: "modema" })
 export class InvoiceAddressValidationResults {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

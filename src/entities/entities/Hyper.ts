@@ -1,7 +1,7 @@
 import { Column, Entity, Index } from "typeorm";
 
 @Index("code", ["code"], { unique: true })
-@Entity("hyper", { schema: "mydatabase" })
+@Entity("hyper", { schema: "modema" })
 export class Hyper {
   @Column("varchar", { primary: true, name: "code", length: 45 })
   code: string;

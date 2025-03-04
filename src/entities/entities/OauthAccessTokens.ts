@@ -1,7 +1,7 @@
 import { Column, Entity, Index } from "typeorm";
 
 @Index("oauth_access_tokens_user_id_index", ["userId"], {})
-@Entity("oauth_access_tokens", { schema: "mydatabase" })
+@Entity("oauth_access_tokens", { schema: "modema" })
 export class OauthAccessTokens {
   @Column("varchar", { primary: true, name: "id", length: 100 })
   id: string;

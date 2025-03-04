@@ -15,7 +15,7 @@ import { ColorCategorySubproduct } from "./ColorCategorySubproduct";
 @Index("color_categories_image_id_index", ["imageId"], {})
 @Index("color_categories_mobile_image_id_index", ["mobileImageId"], {})
 @Index("color_categories_name_unique", ["name"], { unique: true })
-@Entity("color_categories", { schema: "mydatabase" })
+@Entity("color_categories", { schema: "modema" })
 export class ColorCategories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

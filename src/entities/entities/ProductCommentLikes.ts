@@ -15,7 +15,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("product_comment_likes_user_id_index", ["userId"], {})
-@Entity("product_comment_likes", { schema: "mydatabase" })
+@Entity("product_comment_likes", { schema: "modema" })
 export class ProductCommentLikes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

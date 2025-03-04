@@ -11,7 +11,7 @@ import { Wallets } from "./Wallets";
 
 @Index("retargeting_wallet_charges_user_id_index", ["userId"], {})
 @Index("retargeting_wallet_charges_wallet_id_index", ["walletId"], {})
-@Entity("retargeting_wallet_charges", { schema: "mydatabase" })
+@Entity("retargeting_wallet_charges", { schema: "modema" })
 export class RetargetingWalletCharges {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

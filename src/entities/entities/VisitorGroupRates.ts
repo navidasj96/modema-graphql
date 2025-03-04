@@ -9,7 +9,7 @@ import {
 import { VisitorGroups } from "./VisitorGroups";
 
 @Index("visitor_group_rates_visitor_group_id_index", ["visitorGroupId"], {})
-@Entity("visitor_group_rates", { schema: "mydatabase" })
+@Entity("visitor_group_rates", { schema: "modema" })
 export class VisitorGroupRates {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

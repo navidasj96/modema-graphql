@@ -4,7 +4,7 @@ import { CampaignUefaEuroSubscribers } from "./CampaignUefaEuroSubscribers";
 import { ContactFormHistories } from "./ContactFormHistories";
 import { ContactForms } from "./ContactForms";
 
-@Entity("contact_form_statuses", { schema: "mydatabase" })
+@Entity("contact_form_statuses", { schema: "modema" })
 export class ContactFormStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

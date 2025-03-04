@@ -3,7 +3,7 @@ import { ReturnRequestItemHistories } from "./ReturnRequestItemHistories";
 import { ReturnRequestItems } from "./ReturnRequestItems";
 import { ReturnedInvoices } from "./ReturnedInvoices";
 
-@Entity("return_reasons", { schema: "mydatabase" })
+@Entity("return_reasons", { schema: "modema" })
 export class ReturnReasons {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

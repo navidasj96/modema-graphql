@@ -19,7 +19,7 @@ import { Users } from "./Users";
 @Index("negotiation_histories_new_negotiator_id_index", ["newNegotiatorId"], {})
 @Index("negotiation_histories_old_negotiator_id_index", ["oldNegotiatorId"], {})
 @Index("negotiation_histories_submitted_by_index", ["submittedBy"], {})
-@Entity("negotiation_histories", { schema: "mydatabase" })
+@Entity("negotiation_histories", { schema: "modema" })
 export class NegotiationHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

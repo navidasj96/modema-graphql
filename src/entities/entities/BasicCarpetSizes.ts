@@ -32,7 +32,7 @@ import { TorobProducts } from "./TorobProducts";
 @Index("code", ["code"], {})
 @Index("id", ["id"], {})
 @Index("sort_order", ["sortOrder"], {})
-@Entity("basic_carpet_sizes", { schema: "mydatabase" })
+@Entity("basic_carpet_sizes", { schema: "modema" })
 export class BasicCarpetSizes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

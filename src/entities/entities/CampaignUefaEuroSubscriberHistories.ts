@@ -13,7 +13,7 @@ import { CampaignUefaEuroSubscribers } from "./CampaignUefaEuroSubscribers";
 @Index("campaign_uefa_euro_subscriber_histories_user_id_index", ["userId"], {})
 @Index("idx_histories_statuses", ["contactFormStatusId"], {})
 @Index("idx_histories_subscribers", ["campaignUefaEuroSubscriberId"], {})
-@Entity("campaign_uefa_euro_subscriber_histories", { schema: "mydatabase" })
+@Entity("campaign_uefa_euro_subscriber_histories", { schema: "modema" })
 export class CampaignUefaEuroSubscriberHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

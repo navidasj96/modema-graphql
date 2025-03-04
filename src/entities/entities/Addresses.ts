@@ -23,7 +23,7 @@ import { ReturnRequestAddresses } from "./ReturnRequestAddresses";
 @Index("addresses_crm_company_person_id_index", ["crmCompanyPersonId"], {})
 @Index("addresses_state_id_index", ["stateId"], {})
 @Index("addresses_user_id_index", ["userId"], {})
-@Entity("addresses", { schema: "mydatabase" })
+@Entity("addresses", { schema: "modema" })
 export class Addresses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

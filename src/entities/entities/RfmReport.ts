@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("rfm_report", { schema: "mydatabase" })
+@Entity("rfm_report", { schema: "modema" })
 export class RfmReport {
   @Column("int", { name: "id", unsigned: true, default: () => "'0'" })
   id: number;

@@ -2,7 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { PreorderPreorderStatus } from "./PreorderPreorderStatus";
 import { Preorders } from "./Preorders";
 
-@Entity("preorder_statuses", { schema: "mydatabase" })
+@Entity("preorder_statuses", { schema: "modema" })
 export class PreorderStatuses {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

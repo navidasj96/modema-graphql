@@ -12,7 +12,7 @@ import { Visitors } from "./Visitors";
 
 @Index("visitor_coupons_code_unique", ["code"], { unique: true })
 @Index("visitor_coupons_visitor_id_index", ["visitorId"], {})
-@Entity("visitor_coupons", { schema: "mydatabase" })
+@Entity("visitor_coupons", { schema: "modema" })
 export class VisitorCoupons {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

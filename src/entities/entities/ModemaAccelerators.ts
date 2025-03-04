@@ -2,7 +2,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { ModemaAcceleratorImages } from "./ModemaAcceleratorImages";
 import { ModemaAcceleratorVideos } from "./ModemaAcceleratorVideos";
 
-@Entity("modema_accelerators", { schema: "mydatabase" })
+@Entity("modema_accelerators", { schema: "modema" })
 export class ModemaAccelerators {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

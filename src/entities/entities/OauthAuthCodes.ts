@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity("oauth_auth_codes", { schema: "mydatabase" })
+@Entity("oauth_auth_codes", { schema: "modema" })
 export class OauthAuthCodes {
   @Column("varchar", { primary: true, name: "id", length: 100 })
   id: string;

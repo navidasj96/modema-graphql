@@ -31,7 +31,7 @@ import { Subproducts } from "./Subproducts";
 @Index("return_request_items_return_reason_id_index", ["returnReasonId"], {})
 @Index("return_request_items_return_request_id_index", ["returnRequestId"], {})
 @Index("return_request_items_subproduct_id_index", ["subproductId"], {})
-@Entity("return_request_items", { schema: "mydatabase" })
+@Entity("return_request_items", { schema: "modema" })
 export class ReturnRequestItems {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -8,7 +8,7 @@ import {
 import { Designs } from "./Designs";
 
 @Index("carpet_materials_name_unique", ["name"], { unique: true })
-@Entity("carpet_materials", { schema: "mydatabase" })
+@Entity("carpet_materials", { schema: "modema" })
 export class CarpetMaterials {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

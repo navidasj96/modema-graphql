@@ -47,7 +47,7 @@ import { Subproducts } from "./Subproducts";
   ["subproductId"],
   {}
 )
-@Entity("return_request_item_histories", { schema: "mydatabase" })
+@Entity("return_request_item_histories", { schema: "modema" })
 export class ReturnRequestItemHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

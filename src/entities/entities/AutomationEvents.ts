@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("automation_events_user_id_index", ["userId"], {})
-@Entity("automation_events", { schema: "mydatabase" })
+@Entity("automation_events", { schema: "modema" })
 export class AutomationEvents {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

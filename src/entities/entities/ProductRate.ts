@@ -22,7 +22,7 @@ import { ProductComments } from "./ProductComments";
 @Index("product_rates_rate_id_index", ["rateId"], {})
 @Index("product_rates_subproduct_id_index", ["subproductId"], {})
 @Index("product_rates_user_id_index", ["userId"], {})
-@Entity("product_rate", { schema: "mydatabase" })
+@Entity("product_rate", { schema: "modema" })
 export class ProductRate {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -20,7 +20,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("returned_invoices_user_id_index", ["userId"], {})
-@Entity("returned_invoices", { schema: "mydatabase" })
+@Entity("returned_invoices", { schema: "modema" })
 export class ReturnedInvoices {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

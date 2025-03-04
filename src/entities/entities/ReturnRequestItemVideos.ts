@@ -18,7 +18,7 @@ import { Videos } from "./Videos";
   {}
 )
 @Index("return_request_item_videos_video_id_index", ["videoId"], {})
-@Entity("return_request_item_videos", { schema: "mydatabase" })
+@Entity("return_request_item_videos", { schema: "modema" })
 export class ReturnRequestItemVideos {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -11,7 +11,7 @@ import { PatternLayers } from "./PatternLayers";
 import { PatternCategories } from "./PatternCategories";
 
 @Index("patterns_pattern_category_id_index", ["patternCategoryId"], {})
-@Entity("patterns", { schema: "mydatabase" })
+@Entity("patterns", { schema: "modema" })
 export class Patterns {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

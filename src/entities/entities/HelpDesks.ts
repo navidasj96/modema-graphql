@@ -12,7 +12,7 @@ import { Users } from "./Users";
 
 @Index("help_desks_image_id_index", ["imageId"], {})
 @Index("help_desks_user_id_unique", ["userId"], { unique: true })
-@Entity("help_desks", { schema: "mydatabase" })
+@Entity("help_desks", { schema: "modema" })
 export class HelpDesks {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

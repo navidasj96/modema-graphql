@@ -18,7 +18,7 @@ import { Products } from "./Products";
   { unique: true }
 )
 @Index("attribute_product_product_id_index", ["productId"], {})
-@Entity("attribute_product", { schema: "mydatabase" })
+@Entity("attribute_product", { schema: "modema" })
 export class AttributeProduct {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

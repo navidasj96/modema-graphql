@@ -17,7 +17,7 @@ import { ProductionPadStatuses } from "./ProductionPadStatuses";
   ["productionPadStatusId"],
   {}
 )
-@Entity("production_pads", { schema: "mydatabase" })
+@Entity("production_pads", { schema: "modema" })
 export class ProductionPads {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

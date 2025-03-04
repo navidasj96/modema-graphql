@@ -13,7 +13,7 @@ import { Wallets } from "./Wallets";
 @Index("wallet_histories_created_by_index", ["createdBy"], {})
 @Index("wallet_histories_transaction_id_index", ["transactionId"], {})
 @Index("wallet_histories_wallet_id_index", ["walletId"], {})
-@Entity("wallet_histories", { schema: "mydatabase" })
+@Entity("wallet_histories", { schema: "modema" })
 export class WalletHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

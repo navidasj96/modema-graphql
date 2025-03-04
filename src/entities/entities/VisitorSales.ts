@@ -11,7 +11,7 @@ import { Visitors } from "./Visitors";
 
 @Index("visitor_sales_visitor_group_id_index", ["visitorGroupId"], {})
 @Index("visitor_sales_visitor_id_index", ["visitorId"], {})
-@Entity("visitor_sales", { schema: "mydatabase" })
+@Entity("visitor_sales", { schema: "modema" })
 export class VisitorSales {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Designs } from "./Designs";
 
-@Entity("carpet_shapes", { schema: "mydatabase" })
+@Entity("carpet_shapes", { schema: "modema" })
 export class CarpetShapes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

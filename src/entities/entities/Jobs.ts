@@ -1,7 +1,7 @@
 import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 @Index("jobs_queue_index", ["queue"], {})
-@Entity("jobs", { schema: "mydatabase" })
+@Entity("jobs", { schema: "modema" })
 export class Jobs {
   @PrimaryGeneratedColumn({ type: "bigint", name: "id", unsigned: true })
   id: string;

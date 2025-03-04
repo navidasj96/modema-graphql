@@ -14,7 +14,7 @@ import { Users } from "./Users";
 @Index("production_rolls_closed_by_index", ["closedBy"], {})
 @Index("production_rolls_created_by_index", ["createdBy"], {})
 @Index("production_rolls_roll_number_unique", ["rollNumber"], { unique: true })
-@Entity("production_rolls", { schema: "mydatabase" })
+@Entity("production_rolls", { schema: "modema" })
 export class ProductionRolls {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -20,7 +20,7 @@ import { Subproducts } from "./Subproducts";
 @Index("basic_carpet_designers_title_unique", ["title"], { unique: true })
 @Index("basic_carpet_designers_user_id_index", ["userId"], {})
 @Index("sort_order", ["sortOrder"], {})
-@Entity("basic_carpet_designers", { schema: "mydatabase" })
+@Entity("basic_carpet_designers", { schema: "modema" })
 export class BasicCarpetDesigners {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -18,7 +18,7 @@ import { ReturnRequestItems } from "./ReturnRequestItems";
   ["returnRequestItemId"],
   {}
 )
-@Entity("return_request_item_images", { schema: "mydatabase" })
+@Entity("return_request_item_images", { schema: "modema" })
 export class ReturnRequestItemImages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

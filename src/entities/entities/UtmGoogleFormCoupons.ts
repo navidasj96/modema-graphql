@@ -11,7 +11,7 @@ import { Users } from "./Users";
 
 @Index("utm_google_form_coupons_coupon_id_index", ["couponId"], {})
 @Index("utm_google_form_coupons_user_id_index", ["userId"], {})
-@Entity("utm_google_form_coupons", { schema: "mydatabase" })
+@Entity("utm_google_form_coupons", { schema: "modema" })
 export class UtmGoogleFormCoupons {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

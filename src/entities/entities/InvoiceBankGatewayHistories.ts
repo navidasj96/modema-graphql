@@ -16,7 +16,7 @@ import { PreorderRegisters } from "./PreorderRegisters";
   ["preorderRegisterId"],
   {}
 )
-@Entity("invoice_bank_gateway_histories", { schema: "mydatabase" })
+@Entity("invoice_bank_gateway_histories", { schema: "modema" })
 export class InvoiceBankGatewayHistories {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

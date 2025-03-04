@@ -9,7 +9,7 @@ import { InvoiceRatesResults } from "./InvoiceRatesResults";
 import { InvoiceShippingRates } from "./InvoiceShippingRates";
 
 @Index("fedex_services_code_unique", ["code"], { unique: true })
-@Entity("shipping_services", { schema: "mydatabase" })
+@Entity("shipping_services", { schema: "modema" })
 export class ShippingServices {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

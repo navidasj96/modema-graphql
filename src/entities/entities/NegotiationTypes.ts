@@ -8,7 +8,7 @@ import {
 import { NegotiationSteps } from "./NegotiationSteps";
 
 @Index("negotiation_types_name_index", ["name"], {})
-@Entity("negotiation_types", { schema: "mydatabase" })
+@Entity("negotiation_types", { schema: "modema" })
 export class NegotiationTypes {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -12,7 +12,7 @@ import { ProductCategories } from "./ProductCategories";
 import { AttributeItems } from "./AttributeItems";
 
 @Index("attribute_groups_product_category_id_index", ["productCategoryId"], {})
-@Entity("attribute_groups", { schema: "mydatabase" })
+@Entity("attribute_groups", { schema: "modema" })
 export class AttributeGroups {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

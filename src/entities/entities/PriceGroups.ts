@@ -3,7 +3,7 @@ import { DiscountSubjects } from "./DiscountSubjects";
 import { PriceGroupSize } from "./PriceGroupSize";
 import { Products } from "./Products";
 
-@Entity("price_groups", { schema: "mydatabase" })
+@Entity("price_groups", { schema: "modema" })
 export class PriceGroups {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

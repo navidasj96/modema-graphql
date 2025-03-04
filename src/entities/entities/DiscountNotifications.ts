@@ -11,7 +11,7 @@ import { Users } from "./Users";
 
 @Index("discount_notifications_product_id_index", ["productId"], {})
 @Index("discount_notifications_user_id_index", ["userId"], {})
-@Entity("discount_notifications", { schema: "mydatabase" })
+@Entity("discount_notifications", { schema: "modema" })
 export class DiscountNotifications {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -22,7 +22,7 @@ import { ShippingServices } from "./ShippingServices";
   ["shippingServiceId"],
   {}
 )
-@Entity("invoice_rates_results", { schema: "mydatabase" })
+@Entity("invoice_rates_results", { schema: "modema" })
 export class InvoiceRatesResults {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

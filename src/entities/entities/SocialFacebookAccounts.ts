@@ -9,7 +9,7 @@ import {
 import { Users } from "./Users";
 
 @Index("social_facebook_accounts_user_id_index", ["userId"], {})
-@Entity("social_facebook_accounts", { schema: "mydatabase" })
+@Entity("social_facebook_accounts", { schema: "modema" })
 export class SocialFacebookAccounts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

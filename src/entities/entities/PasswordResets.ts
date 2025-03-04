@@ -1,7 +1,7 @@
 import { Column, Entity, Index } from "typeorm";
 
 @Index("password_resets_email_index", ["email"], {})
-@Entity("password_resets", { schema: "mydatabase" })
+@Entity("password_resets", { schema: "modema" })
 export class PasswordResets {
   @Column("varchar", { name: "email", length: 191 })
   email: string;

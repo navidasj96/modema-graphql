@@ -18,7 +18,7 @@ import { Countries } from "./Countries";
 @Index("states_chapar_id_index", ["chaparId"], {})
 @Index("states_country_id_index", ["countryId"], {})
 @Index("states_tipax_id_index", ["tipaxId"], {})
-@Entity("states", { schema: "mydatabase" })
+@Entity("states", { schema: "modema" })
 export class States {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

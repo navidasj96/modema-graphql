@@ -9,7 +9,7 @@ import {
 import { Products } from "./Products";
 
 @Index("out_of_stock_but_listed_products_product_id_index", ["productId"], {})
-@Entity("out_of_stock_but_listed_products", { schema: "mydatabase" })
+@Entity("out_of_stock_but_listed_products", { schema: "modema" })
 export class OutOfStockButListedProducts {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

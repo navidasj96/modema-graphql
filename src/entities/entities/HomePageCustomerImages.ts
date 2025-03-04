@@ -20,7 +20,7 @@ import { Products } from "./Products";
   {}
 )
 @Index("home_page_customer_images_product_id_index", ["productId"], {})
-@Entity("home_page_customer_images", { schema: "mydatabase" })
+@Entity("home_page_customer_images", { schema: "modema" })
 export class HomePageCustomerImages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

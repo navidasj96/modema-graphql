@@ -11,7 +11,7 @@ import { Negotiations } from "./Negotiations";
 
 @Index("file_negotiation_file_id_index", ["fileId"], {})
 @Index("file_negotiation_negotiation_id_index", ["negotiationId"], {})
-@Entity("file_negotiation", { schema: "mydatabase" })
+@Entity("file_negotiation", { schema: "modema" })
 export class FileNegotiation {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

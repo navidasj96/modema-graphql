@@ -8,7 +8,7 @@ import {
 import { ContactForms } from "./ContactForms";
 
 @Index("departments_name_unique", ["name"], { unique: true })
-@Entity("departments", { schema: "mydatabase" })
+@Entity("departments", { schema: "modema" })
 export class Departments {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

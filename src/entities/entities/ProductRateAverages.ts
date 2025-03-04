@@ -18,7 +18,7 @@ import { Subproducts } from "./Subproducts";
 )
 @Index("product_rate_averages_rate_id_index", ["rateId"], {})
 @Index("product_rate_averages_subproduct_id_index", ["subproductId"], {})
-@Entity("product_rate_averages", { schema: "mydatabase" })
+@Entity("product_rate_averages", { schema: "modema" })
 export class ProductRateAverages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

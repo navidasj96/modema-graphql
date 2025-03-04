@@ -2,7 +2,7 @@ import { Column, Entity, Index } from "typeorm";
 
 @Index("code", ["code"], { unique: true })
 @Index("subproduct_code", ["subproductCode"], { unique: true })
-@Entity("hyperstar_codes", { schema: "mydatabase" })
+@Entity("hyperstar_codes", { schema: "modema" })
 export class HyperstarCodes {
   @Column("varchar", { primary: true, name: "code", length: 20 })
   code: string;

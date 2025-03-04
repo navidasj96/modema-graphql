@@ -20,7 +20,7 @@ import { UtmGoogleFormCoupons } from "./UtmGoogleFormCoupons";
 @Index("coupons_retargeting_user_id_index", ["retargetingUserId"], {})
 @Index("coupons_updated_by_index", ["updatedBy"], {})
 @Index("coupons_user_id_index", ["userId"], {})
-@Entity("coupons", { schema: "mydatabase" })
+@Entity("coupons", { schema: "modema" })
 export class Coupons {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

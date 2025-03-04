@@ -12,7 +12,7 @@ import { RipTemplateItems } from "./RipTemplateItems";
 import { Users } from "./Users";
 
 @Index("rip_templates_user_id_index", ["userId"], {})
-@Entity("rip_templates", { schema: "mydatabase" })
+@Entity("rip_templates", { schema: "modema" })
 export class RipTemplates {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -11,7 +11,7 @@ import { Subproducts } from "./Subproducts";
 
 @Index("subproduct_special_images_image_id_index", ["imageId"], {})
 @Index("subproduct_special_images_subproduct_id_index", ["subproductId"], {})
-@Entity("subproduct_special_images", { schema: "mydatabase" })
+@Entity("subproduct_special_images", { schema: "modema" })
 export class SubproductSpecialImages {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

@@ -15,7 +15,7 @@ import { SizeGuidesDetails } from "./SizeGuidesDetails";
   ["sizeGuidesDetailsId"],
   {}
 )
-@Entity("images_size_guides_details", { schema: "mydatabase" })
+@Entity("images_size_guides_details", { schema: "modema" })
 export class ImagesSizeGuidesDetails {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

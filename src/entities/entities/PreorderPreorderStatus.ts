@@ -17,7 +17,7 @@ import { Users } from "./Users";
   {}
 )
 @Index("preorder_preorder_status_user_id_index", ["userId"], {})
-@Entity("preorder_preorder_status", { schema: "mydatabase" })
+@Entity("preorder_preorder_status", { schema: "modema" })
 export class PreorderPreorderStatus {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

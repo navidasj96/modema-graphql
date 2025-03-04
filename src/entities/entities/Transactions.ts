@@ -12,7 +12,7 @@ import { WalletHistories } from "./WalletHistories";
 
 @Index("transactions_approved_by_index", ["approvedBy"], {})
 @Index("transactions_user_id_index", ["userId"], {})
-@Entity("transactions", { schema: "mydatabase" })
+@Entity("transactions", { schema: "modema" })
 export class Transactions {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;

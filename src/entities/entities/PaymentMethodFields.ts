@@ -11,12 +11,12 @@ import { PaymentMethods } from "./PaymentMethods";
 
 @Index(
   "payment_method_fields_idx1",
-  ["paymentIdentifier", "paymentMethodId", "name"],
+  ["paymentMethodId", "paymentIdentifier", "name"],
   { unique: true }
 )
 @Index("payment_method_fields_invoice_id_index", ["invoiceId"], {})
 @Index("payment_method_fields_payment_method_id_index", ["paymentMethodId"], {})
-@Entity("payment_method_fields", { schema: "mydatabase" })
+@Entity("payment_method_fields", { schema: "modema" })
 export class PaymentMethodFields {
   @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
   id: number;
