@@ -14,6 +14,8 @@ import { AttributesModule } from './attributes/attributes.module';
 import { AddressModule } from './address/address.module';
 import { AttributeGroupModule } from './attribute-group/attribute-group.module';
 import { AttributeItemModule } from './attribute-item/attribute-item.module';
+import { AttributeModule } from './attribute/attribute.module';
+import { AttributeSubproductModule } from './attribute-subproduct/attribute-subproduct.module';
 
 @Module({
   imports: [
@@ -22,8 +24,8 @@ import { AttributeItemModule } from './attribute-item/attribute-item.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'Navidasj228!',
-      database: 'modema',
+      password: '12345',
+      database: 'mydatabse',
       autoLoadEntities: true,
       synchronize: true,
     }),
@@ -45,6 +47,8 @@ import { AttributeItemModule } from './attribute-item/attribute-item.module';
     AddressModule,
     AttributeGroupModule,
     AttributeItemModule,
+    AttributeModule,
+    AttributeSubproductModule,
   ],
 
   controllers: [AppController],

@@ -3,13 +3,13 @@ import { CreateAttributeInput } from './dto/create-attribute.input';
 import { UpdateAttributeInput } from './dto/update-attribute.input';
 
 @Injectable()
-export class AttributesService {
+export class AttributeService {
   create(createAttributeInput: CreateAttributeInput) {
     return 'This action adds a new attribute';
   }
 
   findAll() {
-    return `This action returns all attributes`;
+    return `This action returns all attribute`;
   }
 
   findOne(id: number) {

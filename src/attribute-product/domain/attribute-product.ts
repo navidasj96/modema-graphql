@@ -1,7 +1,10 @@
-import { InputType, Int, Field } from '@nestjs/graphql';
+import { Attributes } from '@/Attributes';
+import { AttributeItems } from '@/attribute-items/entities/attribute-item.entity';
+import { Products } from './Products';
+import { Field, ObjectType } from '@nestjs/graphql';
 
-@InputType()
-export class CreateAttributeProductInput {
+@ObjectType()
+export class AttributeProduct {
   @Field()
   id: number;
 
