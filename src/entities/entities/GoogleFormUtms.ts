@@ -5,44 +5,44 @@ import {
   JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
-} from "typeorm";
-import { Users } from "./Users";
+} from 'typeorm';
+import { Users } from './Users';
 
-@Index("google_form_utms_form_id_index", ["formId"], {})
-@Index("google_form_utms_status_index", ["status"], {})
-@Index("google_form_utms_url_index", ["url"], {})
-@Index("google_form_utms_user_id_index", ["userId"], {})
-@Index("google_form_utms_utm_index", ["utm"], {})
-@Entity("google_form_utms", { schema: "modema" })
-export class GoogleFormUtms {
-  @PrimaryGeneratedColumn({ type: "int", name: "id", unsigned: true })
+@Index('google_form_utms_form_id_index', ['formId'], {})
+@Index('google_form_utms_status_index', ['status'], {})
+@Index('google_form_utms_url_index', ['url'], {})
+@Index('google_form_utms_user_id_index', ['userId'], {})
+@Index('google_form_utms_utm_index', ['utm'], {})
+@Entity('google_form_utms', { schema: 'modema' })
+export class GoogleFormUtm {
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id', unsigned: true })
   id: number;
 
-  @Column("int", { name: "user_id", unsigned: true })
+  @Column('int', { name: 'user_id', unsigned: true })
   userId: number;
 
-  @Column("varchar", { name: "form_id", length: 191 })
+  @Column('varchar', { name: 'form_id', length: 191 })
   formId: string;
 
-  @Column("varchar", { name: "url", length: 191 })
+  @Column('varchar', { name: 'url', length: 191 })
   url: string;
 
-  @Column("varchar", { name: "utm", length: 191 })
+  @Column('varchar', { name: 'utm', length: 191 })
   utm: string;
 
-  @Column("tinyint", { name: "status", width: 1, default: () => "'0'" })
+  @Column('tinyint', { name: 'status', width: 1, default: () => "'0'" })
   status: boolean;
 
-  @Column("timestamp", { name: "created_at", nullable: true })
+  @Column('timestamp', { name: 'created_at', nullable: true })
   createdAt: Date | null;
 
-  @Column("timestamp", { name: "updated_at", nullable: true })
+  @Column('timestamp', { name: 'updated_at', nullable: true })
   updatedAt: Date | null;
 
   @ManyToOne(() => Users, (users) => users.googleFormUtms, {
-    onDelete: "NO ACTION",
-    onUpdate: "CASCADE",
+    onDelete: 'NO ACTION',
+    onUpdate: 'CASCADE',
   })
-  @JoinColumn([{ name: "user_id", referencedColumnName: "id" }])
+  @JoinColumn([{ name: 'user_id', referencedColumnName: 'id' }])
   user: Users;
 }

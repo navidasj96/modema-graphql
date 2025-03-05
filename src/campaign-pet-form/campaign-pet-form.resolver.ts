@@ -1,0 +1,35 @@
+import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { CampaignPetFormService } from './campaign-pet-form.service';
+import { CampaignPetForm } from './entities/campaign-pet-form.entity';
+import { CreateCampaignPetFormInput } from './dto/create-campaign-pet-form.input';
+import { UpdateCampaignPetFormInput } from './dto/update-campaign-pet-form.input';
+
+@Resolver(() => CampaignPetForm)
+export class CampaignPetFormResolver {
+  constructor(private readonly campaignPetFormService: CampaignPetFormService) {}
+
+  @Mutation(() => CampaignPetForm)
+  createCampaignPetForm(@Args('createCampaignPetFormInput') createCampaignPetFormInput: CreateCampaignPetFormInput) {
+    return this.campaignPetFormService.create(createCampaignPetFormInput);
+  }
+
+  @Query(() => [CampaignPetForm], { name: 'campaignPetForm' })
+  findAll() {
+    return this.campaignPetFormService.findAll();
+  }
+
+  @Query(() => CampaignPetForm, { name: 'campaignPetForm' })
+  findOne(@Args('id', { type: () => Int }) id: number) {
+    return this.campaignPetFormService.findOne(id);
+  }
+
+  @Mutation(() => CampaignPetForm)
+  updateCampaignPetForm(@Args('updateCampaignPetFormInput') updateCampaignPetFormInput: UpdateCampaignPetFormInput) {
+    return this.campaignPetFormService.update(updateCampaignPetFormInput.id, updateCampaignPetFormInput);
+  }
+
+  @Mutation(() => CampaignPetForm)
+  removeCampaignPetForm(@Args('id', { type: () => Int }) id: number) {
+    return this.campaignPetFormService.remove(id);
+  }
+}

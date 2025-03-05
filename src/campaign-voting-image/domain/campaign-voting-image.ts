@@ -1,0 +1,32 @@
+import { Field, Int, ObjectType } from '@nestjs/graphql';
+import { Images } from './Images';
+
+@ObjectType()
+export class CampaignVotingImage {
+  @Field(() => Int)
+  id: number;
+
+  @Field()
+  title: string;
+
+  @Field(() => Int, { nullable: true })
+  imageId?: number;
+
+  @Field(() => Int)
+  campaignNo: number;
+
+  @Field(() => Int)
+  sortOrder: number;
+
+  @Field()
+  isActive: boolean;
+
+  @Field({ nullable: true })
+  createdAt?: Date;
+
+  @Field({ nullable: true })
+  updatedAt?: Date;
+
+  @Field(() => Images)
+  image: Images;
+}
